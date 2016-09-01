@@ -26,16 +26,16 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import url("assets/styles/vendor/bootstrap.min.css"); 
 
 /* owl carousel */
-/*@import url("assets/styles/vendor/owl.carousel.css"); */
+@import url("assets/styles/vendor/owl.carousel.css");
 
 /* fancybox */
-/* @import url("assets/styles/vendor/fancybox/jquery.fancybox.css"); */
+@import url("assets/styles/vendor/fancybox/jquery.fancybox.css");
 
 /* parsley */
-/* @import url("assets/styles/vendor/parsley.css"); */
+@import url("assets/styles/vendor/parsley.css");
 
 /* rev slider */
-/*@import url("assets/styles/vendor/revslider/revslider.css"); */
+@import url("assets/styles/vendor/revslider/revslider.css");
 
 /* flex slider */
 /*@import url("assets/styles/vendor/flexslider/flexslider.css");*/ 

@@ -10,7 +10,7 @@
 /**
 * Incluir plantilla de Slider Home
 **/
-#require_once( locate_template("partials/slider-home/slider-home-revolution.php") );
+require_once( locate_template("partials/slider-home/slider-home-revolution.php") );
 ?>
 
 <!-- SECCIÓN HAZ TU PEDIDO AHORA -->
