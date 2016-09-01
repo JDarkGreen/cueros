@@ -1,0 +1,5 @@
+[01-Sep-2016 21:25:51 UTC] PHP Notice:  Undefined offset: 0 in C:\xampp\htdocs\cueros\wp-includes\capabilities.php on line 117
+[01-Sep-2016 21:25:51 UTC] PHP Notice:  Undefined offset: 0 in C:\xampp\htdocs\cueros\wp-includes\capabilities.php on line 117
+[01-Sep-2016 21:38:50 UTC] PHP Notice:  Undefined offset: 0 in C:\xampp\htdocs\cueros\wp-includes\capabilities.php on line 117
+[01-Sep-2016 21:38:50 UTC] PHP Notice:  Undefined offset: 0 in C:\xampp\htdocs\cueros\wp-includes\capabilities.php on line 117
+[01-Sep-2016 21:48:44 UTC] PHP Parse error:  syntax error, unexpected end of file in C:\xampp\htdocs\cueros\wp-content\themes\cueros_custom_theme\index.php on line 117
