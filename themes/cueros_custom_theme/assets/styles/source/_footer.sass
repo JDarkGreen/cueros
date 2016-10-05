@@ -3,47 +3,38 @@
 /*----------------------------------------------------------------------------------*/
 
 //SECCIÓN
-.mainFooter
-	color  : white
-	margin : 30px auto 0
+#mainFooter
+	background: url('../../images/backgrounds/footer_cueros_artesania.jpg') no-repeat
+	color     : white
+	padding   : 15px 0
 
-/** [ SECCIÓN DE CONTENIDO ] **/
-#mainFooter-section-content
-	background     : url("../../images/backgrounds/footer_cingetec_ingenieria_tecnologia_construccion_fondo.jpg") no-repeat
-	background-size: cover 
-	padding        : 30px 0
-
-//
-.mainFooter__content
-	display: table 
-	width  : 100% 
-
+/* Logo Footer */
+#logoFooter
+	margin   : 0 auto 
+	max-width: 180px 
 
 /* Item de Footer contiene informaciones */
 .mainFooter__item
 	border-right: 1px solid white 
-	display     : table-cell 
-	height      : auto 
-	padding     : 0 44px 
-	width       : 33%
+	min-height  : 163px
 
-	//Variacion con no border
-	&.no-border
+	//último Elemento
+	&:last-child , &:nth-child(3)
 		border-right: none !important
 
 	//Titulos
-	h3.title
-		border-left: 4px solid #A3CA38
-		display    : inline-block
+	h3.title-footer
 		font-size  : 18px
 		font-weight: bold	
 		line-height: 1em  
 		margin     : 0 auto 17px
-		padding    : 0 0 0 15px 
 
+	//Contenedor 
+	.content-item 
+		padding: 17px 15% 0
 
 /** [ LISTA DE DATOS ] **/
-ul.mainFooter__list-data
+ul#mainFooter__list-data
 	list-style-type: none 
 	margin         : 0 
 	padding        : 0 0 0 40px
@@ -62,6 +53,9 @@ ul.mainFooter__list-data
 			text-align    : center 
 			vertical-align: top
 			width         : 20px 
+			//Mobile
+			&.icon-mobile 
+				font-size : 24px
 
 	/** [ VARIACION PÁGINA DE CONTACTO ] **/
 	&.page-contact-menu-data
@@ -74,9 +68,9 @@ ul.mainFooter__list-data
 				color : #0070B8
 
 /* Redes Sociales */
-ul.mainFooter__social-data
+ul#mainFooter__social-data
 	list-style-type: none
-	margin         : 23px 0 
+	margin         : 24px 0 0
 	padding        : 0 
 	li 
 		display: inline-block
@@ -84,7 +78,7 @@ ul.mainFooter__social-data
 		a 
 			color          : white 
 			display        : block
-			font-size      : 25px  
+			font-size      : 22px  
 			text-decoration: none
 			//Hover
 			&:hover 
@@ -96,24 +90,10 @@ ul.mainFooter__social-data
 			a 
 				color : #0070B8
 
-//Variacion texto destacado
-.text-featured
-	color: #A3CA38
-
-/** [ CÓDIGO QR ] **/
-#code-qr
-	margin   : 0 auto 
-	max-width: 130px 
-
-/** Copyright **/
-.text-copyright
-	font-size : 12px
-	font-style: italic
-	margin    : 10px auto
-
 //++Seccion de Desarrollo
 .mainFooter__develop
 	background: #1a1a1a
+	color     : white
 	font-size : 12px 
 	padding   : 5px 0
 	/* Link */

@@ -1,44 +1,8 @@
 var j = jQuery.noConflict();
 
 /**
-* Funciones Comunes
+* Funciones a llamar
 **/
-
-function customThemeTabs()
-{
-	if( j(".js-tabs-panel-backend").length )
-	{
-		j('.js-tabs-panel-backend').tabtab({
-			tabMenu          : '.tabs__menu',             // direct container of the tab menu items
-			tabContent       : '.tabs__content',       // direct container of the tab content items
-			next             : '.tabs-controls__next',       // next slide trigger
-			prev             : '.tabs-controls__prev',       // previous slide trigger
-			
-			startSlide       : 1,                      // starting slide on pageload
-			arrows           : true,                       // keyboard arrow navigation
-			dynamicHeight    : true,                // if true the height will dynamic and animated.
-			useAnimations    : true,                // disables animations.
-			
-			//easing           : 'ease',                     // http://julian.com/research/velocity/#easing
-			//speed            : 350,                         // animation speed
-			//slideDelay       : 0,                      // delay the animation
-			//perspective      : 1200,                  // set 3D perspective
-			//transformOrigin  : 'center top',      // set the center point of the 3d animation
-			//perspectiveOrigin: '50% 50%',       // camera angle
-			
-			animateHeight    : !0,
-			fixedHeight      : !1,
-			scale            : 1,
-			rotateX          : 0,
-			speed            : 500,
-			transformOrigin  : "center left",
-			rotateY          : 90,
-			easing           : "easeInOutCubic",
-			translateX       : 0
-
-		});
-	}	
-}
 
 
 (function($){
@@ -49,9 +13,60 @@ function customThemeTabs()
 	j(document).on("ready",function(){
 
 		/**
-		* Utilizar libreria tabtab
+		* Utilizar ajax para actualizar las opciones del tema
 		*/
-		customThemeTabs();
+
+		j(document).on('click' , '.js-update-ajax-options' , function(e){
+
+			e.preventDefault();
+
+			//Elemento contenedor actual
+			var container_element = j('#'+ j(this).attr('data-id') );
+
+			//Objeto temporal
+			var options = {};
+
+			//Encontrar campos (input , textareas, etc) y guardarlos en un objeto
+			container_element.find('.js-field-ajax').each( function(index,element){
+
+				//name 
+				var current_name = j(this).attr('id');
+				var current_val  = j(this).val();
+
+				options[index] = { [current_name] : current_val };
+			});
+
+			/**
+			  * Variable del directorio template
+			  * objectVariable.templateDir
+			  */
+
+
+			//Enviar por ajax este objeto
+			j.post( objectVariable.templateDir + '/admin/update-options-ajax.php' , {
+
+				options_theme : options
+
+			} , function( data ){
+			  	
+			  	console.log(data);
+		
+				//Cerrar modal
+				j('.close-portBox').trigger('click');
+
+				//Setear Mensaje
+				j(".containerSectionOptions").prepend('<div id="message" class="updated fade"><p><strong> Opciones Guardadas. </strong></p></div>');
+
+				/**
+				* Que los mensajes solo duren 3 segundos y luego se oculten
+				**/
+				j('#message').delay(3000).fadeOut(1000);
+
+			}, "json");
+
+
+		});
+
 
 
 	});

@@ -1,5 +1,4 @@
-<?php 
-	global $post; 
+<?php global $post; 
 	
 
 /***************************************************************************************/
@@ -10,3 +9,12 @@
 include_once('metabox/products/mb-product-code.php');
 /**[ INCLUIR METABOX DE PRECIO ]**/
 include_once('metabox/products/mb-product-price.php');
+
+/***************************************************************************************/
+/**- GALERIA **/
+/***************************************************************************************/
+include_once('metabox/gallery/custom-gallery.php');
+
+
+
+

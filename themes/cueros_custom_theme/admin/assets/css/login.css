@@ -1,37 +1,79 @@
+/**
+** Estilos Para el login de wordpress.
+ */
 
-/*keyframes*/
-@keyframes rotatebox{
-	0%  { transform: rotateY( 0deg ); }
-	100%{ transform: rotateY( 360deg ); }
+/*
+ * Importar Fuentes
+ */
+@import 'https://fonts.googleapis.com/css?family=Ubuntu';
+
+
+/**
+ * Keyframes
+ */
+
+@keyframes slide
+{
+	0%{
+    	transform: translate3d(0, 0, 0);
+  	}
+  	100%{
+    	transform: translate3d( -1440px , 0 , 0);
+  	}
 }
 
-@keyframes pulse{
-	0%, 100%{ transform: scale( 1 ); }
-	50%{ transform: scale( 1.2 ); }
+body.login{ overflow: hidden; }
+
+body.login:after
+{
+	animation : slide 120s linear infinite;
+	background: url('../img/bg-admin-slider.jpg') repeat-x;
+	bottom    : 0;
+	content   : "";
+	left      : 0;
+	position  : absolute;
+	right     : 0;
+	top       : 0;
+	width     : 5000px;
+	z-index   : -1;
 }
 
 
-/*login*/
-body.login{
-	background     : url("../images/bg-login.jpg") no-repeat;
+/**
+ * LOGIN 
+ */
+.login h1 a
+{
+	background: url('../img/logo.jpg') no-repeat;
+	height    : 80px;
+	width     : 150px;
+}
+
+#login p.message
+{
+	background     : url('../img/bg-admin-login.jpg') no-repeat;
 	background-size: cover;
 }
-	
-#login h1 a{ 
-	background: url("../images/admin-logo.jpg") no-repeat; 
-	width     : 124px;
-	height    : 110px;
-	/*animation: pulse 2s cubic-bezier(0, 0, 0, 1.74) infinite;*/
-	animation: rotatebox 6s ease-in-out infinite;
-} 
 
-/* form */
-.login form{
-	background: rgba(0,0,0,.8);
+#login #nav a, #login #backtoblog a
+{
+	color      : black;
+	font-family: 'Ubuntu', sans-serif;	
+	font-size  : 17px;
 }
 
-/*inputs*/
-.login form .input, .login form input[type=checkbox], .login input[type=text]{
-	background: rgba(0,0,0,.8);
-	color     : rgba(255,255,255,.8);
+/*
+ * Formulary
+ */
+#loginform
+{
+	-webkit-background-size: cover;
+	background             : url('../img/bg-admin-login.jpg') no-repeat;
+	background-size        : cover;
+	color                  : black;
+	font-family            : 'Ubuntu', sans-serif;
 }
+
+#loginform label{ color: black; font-weight: 600; }
+
+

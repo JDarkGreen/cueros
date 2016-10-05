@@ -1,0 +1,47 @@
+
+/*--------------------------------------------------*/
+/*- ARCHIVO : Blog Sass */
+/*---------------------------------------------------*/
+
+/* 
+ * Item Preview Post
+ */
+article.itemPreviewPost
+	margin : 0 auto 17px
+	//Link e imagen
+	.link-to-post 
+		width : 36%
+
+	//:hover 
+	&:hover 
+		figure
+			+animation( slidebg 10s ease-in-out )
+		
+	//Imagen
+	figure.featured-image
+		+transition( all 500ms ease )
+		background-position: center center 
+		background-repeat  : repeat-x
+		background-size    : 100%
+		height             : 130px 
+		margin             : 0 22px 0 0
+		overflow           : hidden 
+
+	//Contenedor de Texto
+	.content-text
+		width : calc(64% - 22px)
+
+		//Titulo
+		h3 
+			color      : #200E07
+			font-size  : 20px 
+			font-weight: 600
+			line-height: 1em 
+			margin     : 0 auto 9px
+			a 
+				color          : #200E07
+				text-decoration: none !important
+		//Parrafos
+		p 
+			color    : #908481
+			font-size: 15px

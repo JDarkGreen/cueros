@@ -296,46 +296,44 @@ img.aligncenter, img.alignright, img.alignleft
 
 //LINEA SEPARADORA
 #separator-line 
-	height    : 1px 
+	background: #C8C8C8
+	height    : 2px 
+	margin    : 15px 0
 	width     : 100%
 
 /***************************************************************************************/
 /**-- 1.10 SIDEBAR COMÚN -------------------------------------------------------------**/
 /***************************************************************************************/
 
-/** [ SIDEBAR COMMON ] **/
-.sidebarCommon
- 
-	//Titulo
-	h2.titleSidebar
-		font-size  : 20px 
-		font-weight: 600 
-		margin     : 0 auto 35px 
-		padding    : 0 0 7px 
-		position   : relative
-		//before
-		&:before
-			background: #0070B6
-			bottom    : 0
-			content   : ""
-			height    : 3px 
-			position  : absolute
-			width     : 165px 		
+/** [ SIDEBAR CATEGORIAS ] **/
 
-	//Links
-	a.link-to-item
-		+transition( all 500ms ease-in-out )
-		border-bottom  : 1px solid #C4BDD2
-		color          : #C4BDD2
-		display        : block
-		font-size      : 15px 
-		margin         : 0 auto 25px
-		padding        : 0 0 10px 
-		text-decoration: none
-		//Hover
-		&.active , &:hover 
-			color: #0070B6
+//link padre
+a.linktoParentProduct
+	background     : #A70008
+	color          : white 
+	font-weight    : 600 
+	line-height    : 1 
+	padding        : 8px 19px 
+	text-decoration: none 
 
+//Lista de subcategorias
+ul.menuCategoryProducts
+	background     : #EDEEF0
+	list-style-type: none 
+	margin         : 0
+	padding        : 19px 20px 13px
+	li 
+		a 
+			+transition( all 500ms ease-in-out )
+			color          : #656369
+			display        : block
+			margin         : 0 auto 6px
+			text-decoration: none 
+			font-weight    : 600 
+			//Hover 
+			&:hover 
+				color : black
+		
 
 /***************************************************************************************/
 /**-- 1.11 PREVIEW BLOG DE POST ------------------------------------------------------**/
@@ -456,10 +454,8 @@ img.aligncenter, img.alignright, img.alignleft
 /**-- 1.18 SECCIÓN FACEBOOK  --------------------------------**/
 /***************************************************************************************/
 
-.container__facebook
-	+border-radius( 6px )
-	border  : 8px solid #2f2f2f
-	overflow: hidden
+//.container__facebook
+
 
 /***************************************************************************************/
 /**-- 1.19 SECCION DELIVERY --------------------------------**/

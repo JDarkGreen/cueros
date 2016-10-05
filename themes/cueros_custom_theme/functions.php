@@ -1,40 +1,68 @@
-<?php  
+<?php
+/**
+ * Theme CUEROS WEB funciones y definiciones
+ *
+ * Configurar el tema y proporciona algunas funciones auxiliares , que se utilizan en el
+ * Tema como etiquetas de plantillas personalizadas . Otros están unidos a la acción y el filtro
+ * Ganchos en WordPress para cambiar la funcionalidad básica .
+ *
+ * Cuando se utiliza un tema niño puede anular ciertas funciones (aquellos envueltos
+ * En un function_exists ( ) llamada) definiéndolos por primera vez en su tema del niño
+ * Archivo functions.php . archivo functions.php del tema de los niños está incluido antes
+ * Archivo del tema de los padres , por lo que se utilizarían las funciones de temas niño.
+ *
+ * @link https://codex.wordpress.org/Theme_Development
+ * @link https://codex.wordpress.org/Child_Themes
+ *
+ * Functions that are not pluggable (not wrapped in function_exists()) are
+ * instead attached to a filter or action hook.
+ *
+ * For more information on hooks, actions, and filters,
+ * {@link https://codex.wordpress.org/Plugin_API}
+ */
 
-/***********************************************************************************************/
-/* 	Define Constantes */
-/***********************************************************************************************/
-define('THEMEROOT', get_stylesheet_directory_uri() );
-define('IMAGES', THEMEROOT.'/assets/images');
-define('LANG', 'this-theme-framework');
+/**
+ * Opciones del tema
+ */
 
-/***********************************************************************************************/
+$options = get_option("theme_settings");
+
+
+/**
+ * Definiendo Constantes
+ */
+require('functiones/constants.php');
+
+
+/******************************************************************/
 /* 	Archivos de Condiguración en el Administrador */
-/***********************************************************************************************/
+/*******************************************************************/
+
+/*-----------------
+* Agregar nuevas columnas 
+*------------------*/
+require('admin/custom/new-columns.php');
+
 
 /**
 * Setear scripts archvos css y javascript de la administracion del tema
 **/
 //css
-require_once('admin/assets/custom-styles.php');
+require('admin/assets/custom-styles.php');
 //javascript
-require_once('admin/assets/custom-scripts.php');
+require('admin/assets/custom-scripts.php');
 
-/**
+/*-----------------
 * Opciones del tema
-**/
-require_once('admin/theme-customizer.php');
-
-/**
-* Customizar Urls
-**/
-require_once('admin/rewrite/rewrite_slug.php');
-
-/**
-* Agregar nuevas columnas 
-**/
-require_once('admin/custom/new-columns.php');
+*------------------*/
+include('admin/theme-customizer-modal.php');
 
 
+/*-----------------------------------------
+/* FUNCIONES PERSONALIZADAS
+*-----------------------------------------*/
+
+include('functiones/custom-functions.php');
 
 /***********************************************************************************************/
 /* 	Archivos de Condiguración en el Tema  */
