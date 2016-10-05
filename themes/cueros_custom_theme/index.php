@@ -13,25 +13,20 @@
 ?>
 
 <?php  
-/**
-  * Incluir plantilla de Slider Home
-  */
-require_once( locate_template("partials/slider-home/slider-home-revolution.php") );
+/*
+ * Incluir plantilla de Slider Home
+ */
+include(locate_template("partials/slider-home/slider-home-revolution.php"));
+
+/*
+ * Incluir template de sección delivery
+ */
+include(locate_template("partials/section-common-delivery.php"));
+
+
 ?>
 
-<!-- SECCIÓN HAZ TU PEDIDO AHORA -->
-<section class="sectionCommon__delivery">
 
-	<!-- Wrapper de Contenido / Contenedor Layout -->
-	<div class="pageWrapperLayout">
-		
-		<h2 class="text-xs-center text"> <?= __("HAZ TU PEDIDO AHORA: ","LANG"); ?>
-			<span>  <?= __("info@wallpay.com","LANG"); ?> </span>
-		</h2>
-
-	</div> <!-- /.pageWrapperLayout -->
-
-</section> <!-- /.sectionCommon__delivery -->
 
 <!-- ESPACIO --> <br><br>
 

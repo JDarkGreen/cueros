@@ -21,8 +21,22 @@ function load_custom_scripts()
 	//cargar sliderevolution
 	wp_enqueue_script('revslider', THEMEROOT . '/assets/js/vendor/jquery.themepunch.revolution.min.js', array('jquery'), '4.3.6', true);
 
+	//Cargar Owl Carousel
+	wp_enqueue_script('wp-owl-carousel-js', THEMEROOT . '/assets/js/vendor/owl.carousel.min.js', array('jquery'), '1.0', true);
+
+	/*
+	 * Cargar Fancybox
+	 */
+	wp_enqueue_script('wp-fancybox-js', THEMEROOT . '/assets/js/vendor/jquery.fancybox.pack.js', array('jquery'), '2.1.5', true);
+
+	/*
+	 * Cargar Validador
+	 */
+	wp_enqueue_script('parsley', THEMEROOT . '/assets/js/vendor/parsley.min.js', array('jquery'), '2.3.11', true);
+	wp_enqueue_script('p_idioma_es', THEMEROOT . '/assets/js/vendor/i18n/es.js', '' , false , true);
+
 	//custom script
-	wp_enqueue_script('custom_script', THEMEROOT . '/assets/js/source/script-compiled.js', array('jquery'), '1.0' , true );
+	wp_enqueue_script('custom_script', THEMEROOT . '/assets/js/source/script.js', array('jquery'), '1.0' , true );
 
 }
 

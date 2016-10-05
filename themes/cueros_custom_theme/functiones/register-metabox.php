@@ -1,5 +1,15 @@
 <?php global $post; 
 	
+/*****************************************************************/
+/**- COMUNES **/
+/******************************************************************/
+
+/**[ INCLUIR METABOX DE BANNER DE PÁGINA ]**/
+include("metabox/common/mb_custom_banner.php");
+
+/**[ INCLUIR METABOX DE GALERÍA ]**/
+include("metabox/common/mb_custom_gallery.php");
+
 
 /***************************************************************************************/
 /**- PRODUCTOS **/
@@ -10,10 +20,7 @@ include_once('metabox/products/mb-product-code.php');
 /**[ INCLUIR METABOX DE PRECIO ]**/
 include_once('metabox/products/mb-product-price.php');
 
-/***************************************************************************************/
-/**- GALERIA **/
-/***************************************************************************************/
-include_once('metabox/gallery/custom-gallery.php');
+
 
 
 
