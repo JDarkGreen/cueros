@@ -1,0 +1,69 @@
+
+/*--------------------------------------------------*/
+/*- ARCHIVO : Productos Sass */
+/*---------------------------------------------------*/
+
+/*
+ * Contenedor Página
+ */
+#pageProducts
+	padding : 54px 0 
+
+/*
+ * Item Single Artículo / Producto
+ */
+.itemSingleProduct
+	
+	//Imágen Destacada
+	figure.featured-image
+		border  : 1px solid rgba(0,0,0,.1)
+		height  : 419px
+		overflow: hidden
+
+	//Thumbnails de Carousel
+	.thumbnails-products
+		.thumbnails-product
+			border  : 1px solid rgba(0,0,0,.1)
+			cursor  : pointer 
+			height  : 95px 
+			margin  : 0 13px 20px 0
+			overflow: hidden
+			padding : 5px 
+			width   : calc( (100%/3) - ( (2*13px) / 3) )
+			//Terceros y últimos elementos
+			&:nth-child(3) , &:last-child 
+				margin-right: 0 !important
+
+	//Título
+	h2.title-product
+		font-size  : 24px
+		line-height: 1em 
+		margin     : 0 auto 20px
+
+	//Párrafos
+	p 
+		color      : #8D8D8D
+		font-size  : 15px 
+		font-weight: 600 
+		&.price , &.information
+			color : black
+			span 
+				color : #8D8D8D
+
+
+/*
+ * Sección Productos Destacados
+ */
+#sectionFeaturedProducts
+	margin : 40px 0 0 0
+
+	//Flechas de Carousel
+	.container-arrows
+		position: absolute
+		right   : 10px
+		top     : -7px
+		.arrow-product
+			color          : silver 
+			font-size      : 30px 
+			line-height    : 1em 
+			text-decoration: none !important

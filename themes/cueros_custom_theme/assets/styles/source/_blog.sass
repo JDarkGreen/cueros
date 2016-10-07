@@ -46,19 +46,56 @@ article.itemPreviewPost
 			color    : #908481
 			font-size: 15px
 
+/*
+ * Página Blog
+ */
+#pageBlog
+	padding : 38px 0
+
+/*
+ * Main Article
+ */
+#mainSingleArticle
+	padding : 38px 0
+
+//Title blog
+.title-blog 	
+	font-size: 18px 
+	padding  : 10px 
 
 /*
  * Item Preview in Blog
  */
 article.itemBlogPreview
 	border-bottom: 1px solid silver 
-	margin       : 14px 0
+	padding      : 14px 0
 	
+	//:hover 
+	&:hover 
+		figure.featured-image 
+			+filter( sepia(100%) ) 
+			background-size: 110%
+
 	//Image
 	figure.featured-image 
+		+transition( all 600ms ease-in-out )
 		background-repeat: no-repeat
-		background-size  : cover 
+		background-size  : 100% 
 		height           : 171px 
 		margin           : 0 12px 0 0
 		max-width        : 276px 
+		overflow         : hidden
 		width            : 100%
+	
+	//Content text
+	.content-text
+		padding: 18px 0
+		//Titulo
+		h2 
+			color      : #D7020C
+			font-size  : 24px
+			font-weight: 600
+		//Link 
+		a 
+			color          : #FF2E02
+			text-decoration: none 

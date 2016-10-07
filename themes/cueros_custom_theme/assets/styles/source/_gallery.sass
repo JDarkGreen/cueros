@@ -1,0 +1,53 @@
+
+/*--------------------------------------------------*/
+/*- ARCHIVO : GALLERY Sass */
+/*---------------------------------------------------*/
+
+/*
+ * Contenedor de Página
+ */
+
+#pageGallery
+	padding : 50px 0
+
+/*
+ * Contenedor Seccion
+ */
+.containerSectionGallery
+	padding : 0 0 0 20px
+
+/*
+ * Título de Galería
+ */
+.title-gallery
+	color    : black 
+	font-size: 20px 
+
+/*
+ * Item de Galería
+ */
+.itemGallery
+	+transition( all 600ms ease-out )
+	border   : 1px solid rgba(0,0,0,.1)
+	margin   : 0 22px 47px 0
+	max-width: calc( (100%/2) - 22px )
+	overflow : hidden 
+	width    : 100%
+	figure 
+		background-position: center center
+		background-repeat  : repeat-x
+		background-size    : cover 
+		height             : 223px
+		margin             : 0 
+
+	//Hover 
+	&:hover 
+		+filter( sepia(100%) )
+		figure 
+			background-size: contain
+			width          : 1150px
+			+animation( slide 60s ease-out infinite )
+
+	//Segundos y Último elemento
+	&:nth-child(2) , &:last-child 
+		margin-right: 0 !important

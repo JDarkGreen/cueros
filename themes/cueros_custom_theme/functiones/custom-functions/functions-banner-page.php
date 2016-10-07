@@ -22,7 +22,7 @@ function has_banner_page( $page_id )
 /**
 * Conseguir banner de página
 **/
-function get_banner_page( $page_id )
+function get_banner_page( $page_id = null )
 {
 	global $options;
 
@@ -30,6 +30,6 @@ function get_banner_page( $page_id )
 		
 		return get_post_meta( $page_id , 'mb_featured_banner' , true );
 	else:
-		return 'https://unsplash.it/1920/314';
+		return IMAGES . '/default_banner_top.jpg';
 	endif;
 }

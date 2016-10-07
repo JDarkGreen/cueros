@@ -57,7 +57,8 @@
 				<!-- Botón Comprar -->
 				<a href="#" class="btn__buy text-uppercase">comprar</a>
 
-			</article>
+			</article><!-- /.itemPreview__producto text-xs-center -->
+
 		</div> <!-- ./col-xs-12 col-sm-4 -->
 
 	<?php endwhile; ?>

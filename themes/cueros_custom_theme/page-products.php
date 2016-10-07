@@ -1,4 +1,4 @@
-<?php /*Template Name: Página Blog - Plantilla */ ?>
+<?php /*Template Name: Página Producto - Plantilla */ ?>
 <?php  
 
 /**
@@ -26,7 +26,7 @@ include(locate_template('partials/banner-top-page.php'));
 /*
  * Variables para paginación 
  */
-$posts_per_page = 4;
+$posts_per_page = 6;
 $paged          = get_query_var('paged') ? get_query_var('paged') : 1;
 
 /*
@@ -37,7 +37,7 @@ $args = array(
 	'orderby'        => 'date',
 	'paged'          => $paged,
 	'post_status'    => 'publish',
-	'post_type'      => 'post',
+	'post_type'      => 'theme-producto',
 	'posts_per_page' => $posts_per_page,
 );
 
@@ -49,16 +49,28 @@ $the_query = new WP_Query( $args );
 <div class="pageWrapperLayout">
 
 	<!-- Contenedor Página : Nosotros -->
-	<div id="pageBlog">
+	<div id="pageProducts">
 
 		<div class="row">
+
+			<!--  Sidebar -->
+			<div class="col-xs-12 col-sm-4">
+
+				<?php  
+			      /*
+			       * Incluir template de categorias
+			       */
+				include_once(locate_template("partials/sidebar/categories-product.php"));
+				?>
+
+			</div> <!-- /.col-xs-12 col-sm-4 -->
 
 			<!-- Contenido -->
 			<div class="col-xs-12 col-sm-8">
 
 				<?php if( $the_query->have_posts() ): ?>
 				
-				<div class="containerRelative">
+				<div class="row containerRelative">
 					
 					<?php  
 						/*
@@ -67,41 +79,35 @@ $the_query = new WP_Query( $args );
 					while( $the_query->have_posts() ): $the_query->the_post();
 					?>
 
-					<article class="itemBlogPreview">
+					<!-- Item preview de producto -->
+					<div class="col-xs-12 col-sm-4">
 
-						<!-- Imágen -->
-						<?php  
-							$feat_url = has_post_thumbnail() ? wp_get_attachment_url( get_post_thumbnail_id() ) : IMAGES . '/default_cueros.jpg';	
-						?>
-						
-						<a href="<?= get_permalink(); ?>" class="link-to-post">
-							<figure class="featured-image pull-sm-left" style="background-image : url( <?= $feat_url ?> )">
-							</figure>
-						</a> <!-- /. -->
-						
-						<!-- Texto -->
-						<div class="content-text">
-							
+						<article class="itemPreview__producto text-xs-center">
+							<!-- Enlace al producto -->
+							<a href="<?= get_permalink( get_the_ID() ); ?>">
+								<!-- Imagen -->
+								<figure>
+									<?= get_the_post_thumbnail( get_the_ID() , 'full' , array("class"=>'img-fluid m-x-auto') ); ?>
+								</figure> <!-- /.figure -->
+							</a>
+							<!-- Nombre corto -->
 							<h2> <?= get_the_title(); ?> </h2>
-
-							<?php 
-								$excerpt_text = wp_strip_all_tags( get_the_content() ); 
-								$excerpt_text = wp_trim_words( $excerpt_text , 20 , '' );
-							?>
-
-							<!-- Párrafo Extracto -->
-							<p> <?= $excerpt_text  . '... ' ; ?> 
-								<a href="<?= get_the_permalink(); ?>" class="link-to-post" title="<?= get_the_title(); ?>" > 
-								<?= __( 'Leer más' , LANG ); ?>
-								</a>
+							<!-- Codigo de Producto -->
+							<p class="product-code">
+								<strong></strong>
+							</p>
+							<!-- Precio regular del producto -->
+							<p class="product-price">
 							</p>
 
-						</div> <!-- /.content-text -->
+							<!-- Saltos de Línea --> <br>
 
-						<!-- Limpiar floats --> 
-						<div class="d-block clearfix"></div>
-						
-					</article> <!-- /.itemBlogPreview -->
+							<!-- Botón Comprar -->
+							<a href="#" class="btn__buy text-uppercase">comprar</a>
+
+						</article><!-- /.itemPreview__producto text-xs-center -->
+
+					</div> <!-- ./col-xs-12 col-sm-4 -->
 
 					<?php endwhile; ?>
 					
@@ -129,21 +135,6 @@ $the_query = new WP_Query( $args );
 				<?php endif; wp_reset_postdata(); ?>
 
 			</div> <!-- /.col-xs-12 col-sm-8 -->
-
-			<!--  Sidebar -->
-			<div class="col-xs-12 col-sm-4">
-
-				<?php  
-					/** 
-					  * Incluir Template de Categorías
-					  * de Post
-					  */
-					include(locate_template('partials/sidebar/categories-post.php'));
-				?>
-
-
-			</div> <!-- /.col-xs-12 col-sm-4 -->
-			
 
 		</div> <!-- /.row -->
 		

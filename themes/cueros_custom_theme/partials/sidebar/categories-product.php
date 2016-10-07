@@ -1,9 +1,11 @@
 <?php /* Sidebar Categorias de Productos */ 
 
-//Objeto actual si es taxonomía
-$current_term         = get_queried_object(); 
-
 $cat_product_taxonomy = 'producto_category';
+
+//Objeto actual si es taxonomía
+
+$current_term = get_queried_object(); 
+$current_term_id = isset($current_term->term_id) ? $current_term->term_id : 1;
 
 ?>
 
@@ -20,10 +22,12 @@ $cat_product_taxonomy = 'producto_category';
 		'meta_key'   => 'meta_tax_order',
 	));
 
+if( $parent_cat_products ) :
+
 #Hacer recorrido para obtener elementos padre
 foreach( $parent_cat_products as $parent_cat_product ) : ?>
 
-	<a href="<?= get_term_link( $parent_cat_product ); ?>" class="text-uppercase d-block linktoParentProduct <?= $current_term->term_id == $parent_cat_product->term_id ? 'active' : '' ?>">
+	<a href="<?= get_term_link( $parent_cat_product->term_id ); ?>" class="text-uppercase d-block linktoParentProduct <?= $current_term_id == $parent_cat_product->term_id ? 'active' : '' ?>">
 		<?php _e( $parent_cat_product->name , LANG  ); ?>
 	</a> <!-- /.end of parent category -->
 	
@@ -43,7 +47,7 @@ foreach( $parent_cat_products as $parent_cat_product ) : ?>
 	foreach( $childs_cat_products as $child_cat_products ) :  ?>
 		
 		<li>
-			<a href="<?= get_term_link( $child_cat_products ); ?>" class="link-to-item <?= $current_term->term_id == $child_cat_products->term_id ? 'active' : '' ?>">
+			<a href="<?= get_term_link( $child_cat_products->term_id ); ?>" class="link-to-item <?= $current_term_id == $child_cat_products->term_id ? 'active' : '' ?>">
 			<?php _e( $child_cat_products->name , LANG  ); ?>
 			</a> <!-- /.end of parent category -->
 		</li>
@@ -53,4 +57,6 @@ foreach( $parent_cat_products as $parent_cat_product ) : ?>
 	</ul> <!-- /.sidebarCategoryProducts -->
 
 <?php endforeach; ?>
+
+<?php endif; ?>
 

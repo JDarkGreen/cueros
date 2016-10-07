@@ -22,7 +22,6 @@ $id_banner = isset($banner) && !empty($banner) ? $banner->ID : get_queried_objec
   * Renderizando el banner
   */
 	
-	if( has_banner_page( $id_banner ) ) :
 ?>
 
 	<!-- Banner top de Página -->
@@ -39,8 +38,6 @@ $id_banner = isset($banner) && !empty($banner) ? $banner->ID : get_queried_objec
 		</h2>
 
 	</section> <!-- /.pageCommon__banner -->
-
-<?php endif; ?>
 
 
 

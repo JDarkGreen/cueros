@@ -1,10 +1,10 @@
-<?php /*Template Name: Página Blog - Plantilla */ ?>
+<?php /* Categorías de Blog */ ?>
 <?php  
 
 /**
   * Objecto Actual
   */
-global $post;
+$current_cat = get_queried_object();
 
 /*
  * Mostrar Header
@@ -19,7 +19,7 @@ $options = get_option("theme_settings");
 /*
  * Variable para Template banner de página
  */
-$banner = $post;
+$banner = get_page_by_title('blog');
 
 include(locate_template('partials/banner-top-page.php'));
 
@@ -38,6 +38,7 @@ $args = array(
 	'paged'          => $paged,
 	'post_status'    => 'publish',
 	'post_type'      => 'post',
+	'cat'            => $current_cat->term_id,
 	'posts_per_page' => $posts_per_page,
 );
 
@@ -55,6 +56,15 @@ $the_query = new WP_Query( $args );
 
 			<!-- Contenido -->
 			<div class="col-xs-12 col-sm-8">
+
+				<!-- Título -->
+				<div class="bg-danger">
+	
+					<h2 class="title-blog text-uppercase">
+						<?= __( $current_cat->name , LANG ); ?>
+					</h2>
+
+				</div> <!-- /.bg-danger -->
 
 				<?php if( $the_query->have_posts() ): ?>
 				
@@ -125,6 +135,14 @@ $the_query = new WP_Query( $args );
 					</a>
 					
 				</section> <!-- /.sectionPagination -->
+
+				<?php else: ?>
+
+					<br/>
+					
+					<div class="alert alert-warning" role="alert">
+					  <strong>Ops!</strong> <?= __( 'No hay entradas en esta categoría por el momento.Puede visitar otras categorías. Gracias' , LANG ); ?>
+					</div>
 
 				<?php endif; wp_reset_postdata(); ?>
 

@@ -304,7 +304,40 @@ img.aligncenter, img.alignright, img.alignleft
 /**-- 1.10 SIDEBAR COMÚN -------------------------------------------------------------**/
 /***************************************************************************************/
 
-/** [ SIDEBAR CATEGORIAS ] **/
+/** [ WIDGET ] **/
+.widgetSidebar
+	//Título
+	.title-sidebar
+		background     : #A70008
+		color          : white 
+		font-size      : 18px 
+		font-weight    : 600 
+		line-height    : 1 
+		margin         : 0
+		padding        : 8px 19px 
+		text-decoration: none
+	//Contenedor 
+	.content 
+		background     : #EDEEF0
+		list-style-type: none 
+		margin         : 0
+		padding        : 19px 20px 13px
+	//Items
+	a.item-link
+		+transition( all 500ms ease-in-out )
+		color          : #656369
+		display        : block
+		margin         : 0 auto 6px
+		text-decoration: none 
+		font-weight    : 600 
+		//Hover 
+		&:hover , &.active
+			color : black		
+
+
+/**
+  * Productos
+  */
 
 //link padre
 a.linktoParentProduct
@@ -331,44 +364,7 @@ ul.menuCategoryProducts
 			font-weight    : 600 
 			//Hover 
 			&:hover 
-				color : black
-		
-
-/***************************************************************************************/
-/**-- 1.11 PREVIEW BLOG DE POST ------------------------------------------------------**/
-/***************************************************************************************/
-
-//Slider de Post y preview de post
-.pagePreview_post
-	/* Artículos */
-	.articleItem
-		color      : black 
-		margin     : 0 auto 34px
-		/* Imagen */
-		figure 
-			margin   : 0 auto
-			overflow : hidden
-			img 
-				+transition( all 3s ease-in )
-		/* Titulo */
-		h3 
-			font-size: 16px
-			height   : 34px
-			margin   : 0 auto 20px 
-			overflow : hidden
-		/* Parrafo */
-		p 
-			font-size  : 14px
-			line-height: 1.4em 
-			/* Link del post */
-			a.read-more
-				display        : inline-block
-				text-decoration: none
-		/* Hover Article */
-		&:hover 
-			figure 
-				img 
-					+scale( 1.2 )
+				color : blac
 
 
 /***************************************************************************************/
@@ -376,6 +372,7 @@ ul.menuCategoryProducts
 /***************************************************************************************/
 
 .sectionPagination
+	margin : 20px 0 0
 	span 
 		color    : black 
 		display  : inline-block
@@ -391,23 +388,13 @@ ul.menuCategoryProducts
 		text-decoration: none 
 		//HOVER AND ACTIVE 
 		&:hover , &.active 
-			background: #A8CB43
+			background: #D7020C
+		//Disable 
+		&.disabled 
+			+opacity(.6)
+			pointer-events: none
+			z-index       : -9999
 
-
-/***************************************************************************************/
-/**-- 1.13 MENU DE DATOS -------------------------------------------------------------**/
-/***************************************************************************************/
-
-.menuDataList
-	list-style-type: none 
-	margin         : 0 auto 30px 
-	padding        : 0 0 0 35px
-	li 
-		display  : flex
-		i 
-			height: 20px 
-			margin: 0 6px 0 -30px
-			width : 20px 
 
 /***************************************************************************************/
 /**-- 1.17 SECCIÓN COMPARTIR DE CADA POST O ELEMENTO  --------------------------------**/
@@ -450,13 +437,6 @@ ul.menuCategoryProducts
 
 
 /***************************************************************************************/
-/**-- 1.18 SECCIÓN FACEBOOK  --------------------------------**/
-/***************************************************************************************/
-
-//.container__facebook
-
-
-/***************************************************************************************/
 /**-- 1.19 SECCION DELIVERY --------------------------------**/
 /***************************************************************************************/
 
@@ -474,3 +454,25 @@ ul.menuCategoryProducts
 			color      : #FABBA4
 			font-weight: 500
 
+
+/*************************************************************/
+/**-- 1.20 COMPONENTES PÁGINAS -----------------------------**/
+/*************************************************************/
+
+/*
+ * Páginas Con Galerías
+ */
+.pageWithGallery	
+	.owl-controls	
+		.owl-dots
+			.owl-dot
+				+border-radius( 50% )
+				+transition( all 500ms ease )
+				border : 2px solid #B0B0B0
+				display: inline-block
+				height : 12px 
+				margin : 0 6px 0 0
+				width  : 12px
+				//active and hover
+				&.active , &:hover 
+					border: 2px solid black
