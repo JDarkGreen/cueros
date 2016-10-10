@@ -1,7 +1,3 @@
-<?php  
-	echo dirname(__FILE__); die();
-?>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
  
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -13,35 +9,36 @@
 	<title> Email Design by Ingenioart and JGreen </title>
 </head>
 
-<?php  
+<?php 
+	
+	include('../../../../wp-load.php');
+
+	/*
+	 * Variable Path
+	 */
+	$logopath = THEMEROOT . '/email/images/logo.png';
 
 	//Varibles colores de plantila - en hexadecimal
-	$bg_header     = "#362017";
+	$bg_header     = "#A70008";
 	$bg_body       = "#ffffff";
-	$bg_footer     = "#FF1213";
+	$bg_footer     = "#200E06";
 	$bg_ingenioart = "#0074BB";
 	
 	$name_empresa  = "Cueros: Web";
-	$link_web      = "http://iuigv.com/cuerosweb/";
-	$url_image     = ;
-
-	//Tamaño Imágen
-	$w_image = "100";
-	//Altura Imágen
-	$h_image = "100";
 ?>
 
 
 <body style="margin: 0; padding: 0;">
+
 	<table align="center" border="0" cellpadding="0" cellspacing="0" width="600" style="border-collapse: collapse; font-family: 'Arial', sans-serif; border: 1px solid rgba(0,0,0,.4) ">
 		
 		<!-- Header -->
 		<tr>
 			<td align="center" bgcolor="<?= $bg_header; ?>" style="padding: 20px 0 20px 0;">
 
-				<a href="<?= $link_web; ?>" target="_blank" style="display:inline-block; border: 2px solid #ffffff;">
+				<a href="<?= get_bloginfo('url'); ?>" target="_blank" style="display:inline-block; background: rgba(255,255,255,.9); padding: 10px;">
 
-					<img src="<?= $url_image; ?>" alt="Mail Template by Ingenioart - JGreen" width="<?= $w_image; ?>" height="<?= $h_image ?>" style="display: block; margin: 0 auto;" />
+					<img src="<?= $logopath; ?>" alt="Mail Template by Ingenioart - JGreen" style="display: block; margin: 0 auto;" />
 
 				</a> 
 			</td>
@@ -69,17 +66,17 @@
 								<tr>
 									<td><strong> Nombre:</strong></td>
 									<td> <?= $name; ?> </td>
+								</tr>
+
+								<tr>
+									<td><strong> Apellidos:</strong></td>
+									<td> <?= $lastname; ?> </td>
 								</tr>								
 
 								<tr>
 									<td><strong> Email:</strong></td>
 									<td> <?= $email; ?></td>
 								</tr>
-
-								<tr>
-									<td><strong> Direcci&oacute;n :</strong></td>
-									<td> <?= $address; ?></td>
-								</tr>	
 
 								<tr>
 									<td><strong> Tel&eacute;fono :</strong></td>

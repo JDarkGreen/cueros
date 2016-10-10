@@ -155,6 +155,7 @@ var j = jQuery.noConflict();
 				},function(data){
 
 					alert( data );
+					//console.log( data );
 
 					j("#input_name").val("");
 					j("#input_lastname").val("");

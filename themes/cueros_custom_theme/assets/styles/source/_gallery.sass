@@ -51,3 +51,30 @@
 	//Segundos y Último elemento
 	&:nth-child(2) , &:last-child 
 		margin-right: 0 !important
+
+
+/*
+ * Item de Iframe de videos 
+ *
+ */
+.itemMultimedia__frame
+	margin   : 0 20px 20px 0 
+	max-width: calc( (100%/4) -  ( (3*20px) / 4 ) )
+	width    : 100%
+	h3 
+		font-size  : 20px 
+		font-weight: 600
+	iframe 
+		border: 1px solid rgba(0,0,0,.1)
+		width : 100%
+
+	//Last Element and 4th element
+	&:nth-child(4n) , &:last-child
+		margin-right: 0 !important
+
+.itemMultimedia__frame--master 
+	max-width : initial 
+	h3 
+		font-size: 25px 
+
+

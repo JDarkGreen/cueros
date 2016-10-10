@@ -27,7 +27,8 @@ nav.mainNavigation
 			margin         : 0 
 			padding        : 0
 			li 
-				display: inline-block
+				display : inline-block
+				position: relative
 				a 
 					color          : #454545
 					display        : block
@@ -36,10 +37,35 @@ nav.mainNavigation
 					padding        : 20px 25px
 					text-decoration: none
 					+transition( all 500ms cubic-bezier(.5,.5,.5,1) )
+
+				//SUB MENU 
+				ul.sub-menu 
+					+opacity( 0 )
+					+transition( all 500ms ease-in-out )
+					left      : 0
+					padding   : 0
+					position  : absolute
+					top       : 125%
+					visibility: hidden
+					z-index   : 999
+					li 
+						display: block 
+						margin : 0 0 5px 
+						a 
+							background : rgba(0,0,0,.5)
+						&:hover , &.current-menu-item , &.current_page_item
+							a 
+								background: #A70008
+
 				//Hover Li and active
 				&:hover , &.current-menu-item , &.current_page_item
 					a 
 						background: #A70008
 						color     : white 
 
+					//Hover Submenu
+					ul.sub-menu 
+						+opacity(1)
+						top       : 105%
+						visibility: visible
 

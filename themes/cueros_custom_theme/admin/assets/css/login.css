@@ -44,9 +44,9 @@ body.login:after
  */
 .login h1 a
 {
-	background: url('../img/logo.jpg') no-repeat;
-	height    : 80px;
-	width     : 150px;
+	background: url('../img/logo.png') no-repeat;
+	height    : 68px;
+	width     : 235px;
 }
 
 #login p.message
@@ -74,6 +74,6 @@ body.login:after
 	font-family            : 'Ubuntu', sans-serif;
 }
 
-#loginform label{ color: black; font-weight: 600; }
+#loginform label{ color: white; font-weight: 600; }
 
 

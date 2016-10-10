@@ -92,18 +92,20 @@ $the_query = new WP_Query( $args );
 							</a>
 							<!-- Nombre corto -->
 							<h2> <?= get_the_title(); ?> </h2>
+
 							<!-- Codigo de Producto -->
 							<p class="product-code">
-								<strong></strong>
+								<strong> <?= get_post_meta( get_the_ID() , 'mb_code_product_text' , true ); ?> </strong>
 							</p>
 							<!-- Precio regular del producto -->
 							<p class="product-price">
+								<?= get_post_meta( get_the_ID() , 'mb_price_product_text' , true ); ?>
 							</p>
 
 							<!-- Saltos de Línea --> <br>
 
 							<!-- Botón Comprar -->
-							<a href="#" class="btn__buy text-uppercase">comprar</a>
+							<a href="<?= get_permalink(); ?>" class="btn__buy text-uppercase">ver detalle</a>
 
 						</article><!-- /.itemPreview__producto text-xs-center -->
 
