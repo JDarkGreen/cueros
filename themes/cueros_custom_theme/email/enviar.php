@@ -32,13 +32,13 @@
 
 	$mail = new PHPMailer();
 
-	$mail->IsSMTP(); // send via SMTP
+	/*$mail->IsSMTP(); // send via SMTP
 	$mail->SMTPSecure = 'ssl'; 
 	$mail->Host      = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 	$mail->Port      = 465;
 	$mail->SMTPAuth  = true; // turn on SMTP authentication
 	$mail->Username  = "jgomez.4net@gmail.com"; // Enter your SMTP username
-	$mail->Password  = "ARLAC_RINO1EVER"; // SMTP password */
+	$mail->Password  = ""; // SMTP password */
 
 	$mail->From     = $email;
 	$mail->FromName = $name;
