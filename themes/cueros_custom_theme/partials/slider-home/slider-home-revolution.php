@@ -44,35 +44,47 @@
 					<?php the_post_thumbnail('full', array('class'=>'img-fluid') ); ?>
 				<?php endif; ?>
 				
-				<?php /*
 
 				<!-- Caption Titulo -->
-				<div class="caption sft big_white" data-x="480" data-y="277" data-speed="3000" data-start="900" data-easing="easeOutBack">
+				<div class="caption sft big_white" data-x="0" data-y="110" data-speed="3000" data-start="900" data-easing="easeOutBack">
 					<section class="pageInicio__slider__content">
+
 						<h2 class="text-uppercase">
 							<?php _e( get_the_title() , LANG ); ?>
 						</h2> <!-- /.pageInicio__slider__title -->
+
+						<h3 class="text-capitalize text-xs-center subtitle">
+							<?php _e( get_the_content() , LANG ); ?>
+						</h3> <!-- /.pageInicio__slider__title -->
+
 					</section> <!-- /.pageInicio__slider__content -->
 				</div> <!-- /.caption sft big_white -->	
 
 				<!-- Caption Contenido -->
-				<div class="caption sft big_white" data-x="480" data-y="323" data-speed="3000" data-start="1000" data-easing="easeInBack">
-					<section class="pageInicio__slider__content">
-						<h2 class="text-uppercase subtitle">
-							<?php _e( get_the_content() , LANG ); ?>
-						</h2> <!-- /.pageInicio__slider__title -->
-					</section> <!-- /.pageInicio__slider__content -->
+				<div class="caption sfl big_white" data-x="150" data-y="250" data-speed="3000" data-start="1000" data-easing="easeInCubic">
+					
+					<?php  
+						/*
+						 * Página de Productos
+						 */
+						$page_products = get_page_by_title('productos');
+						$page_products_link = !empty($page_products) ? get_permalink($page_products->ID) : '#';
+					?>
+					<div class="text-xs-center">
+						
+						<a href="<?= $page_products_link ?>" class="btnCommon__show-more text-uppercase">
+							<?= __( 'ver productos' , LANG ); ?>
+						</a>
+						
+					</div> 	<!-- /.text-xs-center -->
+
+				
 				</div> <!-- /.caption sft big_white -->	
-
-
-				*/?>
-
-
 
 			</li> <!-- /.item-slider -->
 			
-
 		<?php $i++; endwhile; ?>
+
 		</ul> <!-- /. ul -  -->
 	</section> <!-- /.carousel-home -->
 

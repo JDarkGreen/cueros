@@ -107,10 +107,23 @@ $options = get_option( 'theme_settings' );
 		include(locate_template('partials/footer/section-develop.php'));
 	?>
 
+	<script> var url = "<?= THEMEROOT ?>"; </script>
 
 	<?php wp_footer(); ?>
 
-	<script> var url = "<?= THEMEROOT ?>"; </script>
+	<!-- Loader -->
+	 <script type="text/javascript">
+	 	var j = jQuery.noConflict();
+
+        j("#fakeLoader").fakeLoader({
+    
+			timeToHide: 1200, //Time in milliseconds for fakeLoader disappear
+			zIndex    : 9999, // Default zIndex
+			spinner   : "spinner1",//Options: 'spinner1', 'spinner2', 'spinner3', 'spinner4', 'spinner5', 'spinner6', 'spinner7' 
+			bgColor   : "#A70008", //Hex, RGB or RGBA colors
+   		});
+    </script>
+
 
 </body>
 </html>

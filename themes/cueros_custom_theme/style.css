@@ -37,16 +37,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /* rev slider */
 @import url("assets/styles/vendor/revslider/revslider.css");
 
-/* flex slider */
-/*@import url("assets/styles/vendor/flexslider/flexslider.css");*/ 
+/* fakeloader */
+@import url("assets/styles/vendor/fakeloader/fakeLoader.css");
 
 /* slidebars */
 /*@import url("assets/styles/vendor/slidebars/slidebars.min.css");*/
 
-/* mmenu */
-/*@import url("assets/styles/vendor/mmenu/jquery.mmenu.all.css");
-@import url("assets/styles/vendor/mmenu/jquery.mmenu.positioning.css");
-@import url("assets/styles/vendor/mmenu/jquery.mmenu.searchfield.css");*/
 
 /* slick carousel 
 @import url("assets/styles/vendor/slick/slick.css"); 

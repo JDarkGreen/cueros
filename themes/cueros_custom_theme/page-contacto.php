@@ -44,12 +44,19 @@ include(locate_template('partials/banner-top-page.php'));
 					</h2>
 
 					<!-- Lista de Datos -->
-					<?php  
+					<?php
+						#Clase Variable  
+						$menu_class = 'menu-contacto';
 						#Incluir partial lista de datos
 						include( locate_template("partials/footer/menu-list-data.php") );
 					?>
 
 				</section> <!-- /.pageContact__data -->
+
+				<!-- Espacios -->
+				<div class="">
+					<br /><br /><br />
+				</div> <!--  -->
 
 				<!-- SECCIÓN DE REDES SOCIALES  -->
 				<section class="pageContact__social">
@@ -59,23 +66,15 @@ include(locate_template('partials/banner-top-page.php'));
 						<?php _e( "redes sociales" , LANG ); ?> 
 					</h2>
 
-					<!-- Lista de Redes Sociales -->
-					<ul class="social-links social-links--gray">
-						<!-- Facebook -->
-						<?php if( isset($theme_mod['red_social_fb']) && !empty($theme_mod['red_social_fb']) ) : ?>
-							<li><a href="<?= $theme_mod['red_social_fb']; ?>">
-								<i class="fa fa-facebook" aria-hidden="true"></i>
-							</a></li>
-						<?php endif; ?>
-						<!-- Twitter -->
-						<?php if( isset($theme_mod['red_social_twitter']) && !empty($theme_mod['red_social_twitter']) ): ?>
-							<li><a href="<?= $theme_mod['red_social_twitter']; ?>"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
-						<?php endif; ?>
-						<!-- Youtube -->
-						<?php if( isset($theme_mod['red_social_ytube']) && !empty($theme_mod['red_social_ytube']) ) : ?>
-							<li><a href="<?= $theme_mod['red_social_ytube']; ?>"><i class="fa fa-youtube" aria-hidden="true"></i></a> </li>
-						<?php endif; ?>
-					</ul> <!-- /.social-links -->
+					<?php  
+						/*
+						 * Incluir Template Partial de 
+						 * redes sociales 
+						 */
+						$menu_class = 'page-contact-social-links';
+
+						include(locate_template('partials/footer/social-links.php'));
+					?>
 
 				</section> <!-- /. -->
 				
@@ -91,24 +90,41 @@ include(locate_template('partials/banner-top-page.php'));
 						<?php _e( "formulario" , LANG ); ?> 
 					</h2>
 
+					<!-- Subtítulo -->
+					<div class="subtitle">
+						<?= !empty($post->post_content) ? apply_filters('the_content',$post->post_content) : apply_filters('the_content','Si tiene alguna pregunta relacionada con su pedido, sugerencias o comentarios, por favor no dude en comunicarse con nosotros que lo atenderemos con mucho gusto. Gracias por confiar en nosotros.'); ?>
+					</div> <!-- /.subtitle -->
+
+					<!-- Espacio --> <br />
+
 					<!-- Limpiar floats --><div class="clearfix"></div>
 
 					<!-- Formulario -->
 					<form id="form-contacto" action="" class="pageContacto__form" method="POST">
 
-						<!-- Nombre -->
-						<div class="pageContacto__form__group">
-							<label for="input_name" class="sr-only"></label>
-							<input type="text" id="input_name" name="input_name" placeholder="<?php _e( 'Nombres', LANG ); ?>" required />
-						</div> <!-- /.pageContacto__form__group -->
+						<div class="row">
+							
+							<div class="col-xs-12 col-sm-6">
 
-						<!-- Dirección -->
-						<div class="pageContacto__form__group">
-							<label for="input_address" class="sr-only"></label>
-							<input type="text" id="input_address" name="input_address" placeholder="<?php _e( 'Dirección', LANG ); ?>" required />
-						</div> <!-- /.pageContacto__form__group -->
+								<!-- Nombre -->
+								<div class="pageContacto__form__group">
+									<label for="input_name" class="sr-only"></label>
+									<input type="text" id="input_name" name="input_name" placeholder="<?php _e( 'Nombres', LANG ); ?>" required />
+								</div> <!-- /.pageContacto__form__group -->
 
-						<!-- Fila -->
+							</div> <!-- /.col-xs-12 col-sm-6 -->
+
+							<div class="col-xs-12 col-sm-6">
+							
+								<div class="pageContacto__form__group">
+									<label for="input_lastname" class="sr-only"></label>
+									<input type="text" id="input_lastname" name="input_lastname" placeholder="<?php _e( 'Apellidos', LANG ); ?>" required />
+								</div> <!-- /.pageContacto__form__group -->
+							
+							</div> <!-- /.col-xs-12 col-sm-6 -->
+
+						</div> <!-- /.row -->
+
 						<div class="row">
 
 							<div class="col-xs-12 col-sm-6">
@@ -133,14 +149,11 @@ include(locate_template('partials/banner-top-page.php'));
 							
 						</div> <!-- /.row -->
 
-
-
 						<!-- Asunto -->
-						<?php /*
 						<div class="pageContacto__form__group">
 							<label for="input_subject" class="sr-only"></label>
 							<input type="text" id="input_subject" name="input_subject" placeholder="<?php _e( 'Asunto a tratar', LANG ); ?>" required />
-						</div> <!-- /.pageContacto__form__group --> */  ?>
+						</div> <!-- /.pageContacto__form__group -->
 
 						<!-- Texto -->
 						<div class="pageContacto__form__group">
@@ -148,7 +161,7 @@ include(locate_template('partials/banner-top-page.php'));
 							<textarea name="input_message" id="input_message" placeholder="<?php _e( 'Su Mensaje', LANG ); ?>" data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-maxlength="100" data-parsley-minlength-message="Necesitas más de 20 caracteres" data-parsley-validation-threshold="10"></textarea>
 						</div> <!-- /.pageContacto__form__group -->
 
-						<button type="submit" id="send-form" class="btnCommon__show-more btnCommon__show-more--rojo text-uppercase">
+						<button type="submit" id="send-form" class="btnCommon__show-more text-uppercase">
 							<?php _e( 'enviar' , LANG ); ?>
 						</button> <!-- /.btn__send-form -->
 

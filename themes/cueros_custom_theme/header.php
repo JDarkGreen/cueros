@@ -35,6 +35,9 @@
 
 <body <?php body_class(); ?> >
 
+<!-- Loader Fake -->
+<div id="fakeLoader"></div>
+
 <?php
 	# Extraer todas las opciones de personalización
 	$options   = get_option("theme_settings");

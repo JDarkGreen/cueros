@@ -78,9 +78,12 @@ include(locate_template("partials/section-common-delivery.php"));
 				<?php
 					$page_gallery = get_page_by_title("galeria");
 					
-					$image_gallery = has_post_thumbnail( $random_gallery->ID ) ? wp_get_attachment_url( get_post_thumbnail_id( $random_gallery->ID ) ) : "https://unsplash.it/980/724";
+					$image_gallery = has_post_thumbnail( $random_gallery->ID ) ? wp_get_attachment_url( get_post_thumbnail_id( $random_gallery->ID ) ) : IMAGES . '/default_gallery.jpg';
 				?>
-				<img src="<?= $image_gallery; ?>" alt="galerias-cueros-productos" class="img-fluid d-block m-x-auto" />
+				<a href="<?= !empty($page_gallery) ? get_permalink($page_gallery->ID) : '#' ?>">
+					<img src="<?= $image_gallery; ?>" alt="galerias-cueros-productos" class="img-fluid d-block m-x-auto" />
+				</a>
+
 			</section>
 
 			<?php endif; ?>

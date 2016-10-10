@@ -14,9 +14,9 @@ var j = jQuery.noConflict();
 			
     	// Setear revolution slider
 		var api_rev = j("#carousel-home").revolution({
-			delay           : 600, 
+			delay           : 6000, 
 			fullWidth       : "on",
-			navigationArrows: "none",
+			navigationArrows: "verticalcentered",
 			navigationType  : 'none', // use none, bullet or thumb
 			onHoverStop     : "off",
 			startheight     : 420,
@@ -128,6 +128,46 @@ var j = jQuery.noConflict();
 			'openSpeed'  : 300,
 			'closeSpeed' : 300,
 		});
+
+		
+		/*|----------------------------------------------------------------------|*/
+		/*|-----  VALIDAR FORMULARIO   -----|*/
+		/*|----------------------------------------------------------------------|*/
+
+		if( j('#form-contacto').length )
+		{
+			var formulario = j('#form-contacto');
+
+			formulario.parsley();
+
+			formulario.submit( function(e){
+				e.preventDefault();
+				//Subir el formulario mediante ajax
+				j.post( url + '/email/enviar.php', 
+				{ 
+					name    : j("#input_name").val(),
+					lastname: j("#input_lastname").val(),
+					email   : j("#input_email").val(),
+					phone   : j("#input_phone").val(),
+					subject : j("#input_subject").val(),
+					message : j("#input_message").val(),
+					
+				},function(data){
+
+					alert( data );
+
+					j("#input_name").val("");
+					j("#input_lastname").val("");
+					j("#input_email").val("");
+					j("#input_phone").val("");
+					j("input_subject").val("");
+					j("#input_message").val("");
+
+					window.location.reload(false);
+				});			
+			}); 
+
+		}
 
 
 	/*|- end of document -|*/

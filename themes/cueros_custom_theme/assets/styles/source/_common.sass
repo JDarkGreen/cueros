@@ -105,23 +105,19 @@ img.aligncenter, img.alignright, img.alignleft
 /***************************************************************************************/
 //++ Botón Ver Más
 .btnCommon__show-more
-	+box-shadow( inset 0 0 0 0 transparent )
-	+transition( all 800ms ease-in-out )
-	background : #A5C938
-	border     : none
-	color      : black 
-	font-size  : 14px 
-	font-weight: 600 
-	line-height: 1em 
-	padding    : 12px 25px
-	//hover y focus
-	&:hover , &:focus
-		color          : black 
-		outline        : 0px !important
-		text-decoration: none 
-	//hover 
-	&:hover 
-		+box-shadow( inset 150px 0 0 0 transparent )
+	+border-radius (8px )
+	+box-shadow( inset -1px -1px 4px #F0BC9E )
+	+transition( all 500ms ease )
+	-webkit-backface-visibility: hidden
+	background                 : #FFD9B9
+	border                     : none 
+	color                      : #200D06 !important
+	display                    : inline-block
+	padding                    : 10px 45px
+	text-decoration            : none !important 
+	&:focus 
+		color : #200D06
+
 
 //BOTÓN HACIA ARRIBA 
 #arrow-up-page
@@ -166,7 +162,18 @@ img.aligncenter, img.alignright, img.alignleft
 	color      : #1F0E07
 	font-size  : 24px
 	font-weight: 700 
-	margin     : 0 auto 14px 
+	margin     : 0 auto 20px 
+	position: relative
+	//after 
+	&:after 
+		background         : url('../../images/backgrounds/bg_lines_brown.png') no-repeat
+		background-position: center 
+		background-size    : 100% 16px
+		content            : ''
+		height             : 21px
+		margin             : 0 0 0 10px
+		position           : absolute
+		width              : 110px
 
 
 //Titulo Subseccion
@@ -443,6 +450,7 @@ ul.menuCategoryProducts
 .sectionCommon__delivery
 	background: #A70008
 	padding   : 15px 
+	position  : relative
 	//Titulo
 	h2 
 		color      : white 
@@ -453,6 +461,21 @@ ul.menuCategoryProducts
 		span 
 			color      : #FABBA4
 			font-weight: 500
+	
+	//before and after 
+	&:before , &:after
+		+translateY(-50%)
+		background: url('../../images/backgrounds/bg_lines.png') no-repeat
+		content   : ""
+		height    : 21px 
+		position  : absolute
+		top       : 50%
+		width     : 170px 
+	&:before 
+		left: 10%
+	&:after
+		+transform( translateY(-50%) rotateY( 180deg ) )
+		right: 10%
 
 
 /*************************************************************/

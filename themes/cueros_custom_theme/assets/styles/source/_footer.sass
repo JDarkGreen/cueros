@@ -36,6 +36,7 @@
 
 /** [ LISTA DE DATOS ] **/
 ul#mainFooter__list-data
+	color          : white
 	list-style-type: none 
 	margin         : 0 
 	padding        : 0 0 0 40px
@@ -46,7 +47,6 @@ ul#mainFooter__list-data
 		.container-inline 
 			display: inline-block
 		i	
-			color         : white  
 			display       : inline-block
 			font-size     : 20px
 			height        : 20px
@@ -58,15 +58,16 @@ ul#mainFooter__list-data
 			&.icon-mobile 
 				font-size : 24px
 
-	/** [ VARIACION PÁGINA DE CONTACTO ] **/
-	&.page-contact-menu-data
-		li 
-			margin: 0 auto 28px
-			//Texto destacado
-			span.text-featured
-				color : #0070B8
-			i 
-				color : #0070B8
+		//Texto destacado
+		span.text-featured
+			color : #B5182B
+	
+	/*
+	 * Variación de Clase
+	 */
+	&.menu-contacto
+		color : #808080
+
 
 /* Redes Sociales */
 ul#mainFooter__social-data
@@ -87,9 +88,11 @@ ul#mainFooter__social-data
 
 	/** [ VARIACION PÁGINA DE CONTACTO ] **/
 	&.page-contact-social-links
+		display: inline-block
+		margin : 0
 		li 
 			a 
-				color : #0070B8
+				color : #808080
 
 //++Seccion de Desarrollo
 .mainFooter__develop

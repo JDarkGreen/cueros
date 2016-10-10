@@ -9,13 +9,19 @@
   * Funciones requeridas
   * son las que estan en la carpeta functions/custom-functions/social-links 
   */
+
+/*
+ * Clase modificadora del menú
+ */
+$menu_class = isset($menu_class) ? $menu_class : '';
+
 ?>
 
 <!-- Limpiar Floats -->
 <div class="d-block clearfix"></div>
 
 <!-- Menu de redes sociales -->
-<ul id="mainFooter__social-data" class="text-xs-center"> 	
+<ul id="mainFooter__social-data" class="text-xs-center <?= $menu_class; ?>"> 	
 
 <?php  
 /**
