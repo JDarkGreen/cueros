@@ -40,11 +40,23 @@
 			<li class="item-slider" data-transition="<?= $transition ?>" data-slotamount="10">
 
 				<!-- Imagen Destacada -->
-				<?php if( has_post_thumbnail() ) :  ?>
-					<?php the_post_thumbnail('full', array('class'=>'img-fluid') ); ?>
+				<?php if( has_post_thumbnail() ) :  
+
+					$feat_image = wp_get_attachment_url( get_post_thumbnail_id(get_the_ID() ) );
+				?>
+
+					<!-- Visible en Desktop -->
+					<div class="m-x-auto hidden-xs-down">
+						<?php the_post_thumbnail('full', array('class'=>'img-fluid') ); ?>
+					</div> <!-- /. -->
+
+					<!-- Visible en Mobile -->
+					<div class="m-x-auto hidden-sm-up">
+						<figure class="featured-image-slider" style="background-image: url( <?= $feat_image; ?> )"></figure>
+					</div> <!-- /. -->
+
 				<?php endif; ?>
 				
-
 				<!-- Caption Titulo -->
 				<div class="caption sft big_white" data-x="0" data-y="110" data-speed="3000" data-start="900" data-easing="easeOutBack">
 					<section class="pageInicio__slider__content">
@@ -57,28 +69,22 @@
 							<?php _e( get_the_content() , LANG ); ?>
 						</h3> <!-- /.pageInicio__slider__title -->
 
+						<?php  
+							/*
+							 * Página de Productos
+							 */
+							$page_products = get_page_by_title('productos');
+							$page_products_link = !empty($page_products) ? get_permalink($page_products->ID) : '#';
+						?>
+						<div class="text-xs-center">
+							
+							<a href="<?= $page_products_link ?>" class="btnCommon__show-more text-uppercase">
+								<?= __( 'ver productos' , LANG ); ?>
+							</a>
+							
+						</div> 	<!-- /.text-xs-center -->
+
 					</section> <!-- /.pageInicio__slider__content -->
-				</div> <!-- /.caption sft big_white -->	
-
-				<!-- Caption Contenido -->
-				<div class="caption sfl big_white" data-x="150" data-y="250" data-speed="3000" data-start="1000" data-easing="easeInCubic">
-					
-					<?php  
-						/*
-						 * Página de Productos
-						 */
-						$page_products = get_page_by_title('productos');
-						$page_products_link = !empty($page_products) ? get_permalink($page_products->ID) : '#';
-					?>
-					<div class="text-xs-center">
-						
-						<a href="<?= $page_products_link ?>" class="btnCommon__show-more text-uppercase">
-							<?= __( 'ver productos' , LANG ); ?>
-						</a>
-						
-					</div> 	<!-- /.text-xs-center -->
-
-				
 				</div> <!-- /.caption sft big_white -->	
 
 			</li> <!-- /.item-slider -->

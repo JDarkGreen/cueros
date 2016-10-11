@@ -43,9 +43,29 @@
 			font-size: 25px 
 			margin   : 0 auto 10px 
 
+	/* Sección Delivery */
+	.sectionCommon__delivery
+		&:after , &:before 
+			background: none 
+
 	//********************************
 	//* CAROUSELES
 	//********************************
+
+	//Slider Home
+	#carousel-home
+		height: 300px !important
+
+	.pageInicio__slider__content
+		padding: 12% 18px
+		h2 
+			font-size: 40px 
+			+text-shadow( 1px 1px 5px white )
+		h3 
+			font-size: 20px
+			+text-shadow( 1px 1px 6px white )
+		a 
+			font-size: 16px
 
 	//Proyectos
 	#carousel-proyectos-preview
@@ -77,16 +97,15 @@
 			width: 100%
 
 
-
-
 	//********************************
 	//* FOOTER
 	//********************************
 
 	//Item Footer
 	.mainFooter__item 
-		border : none 
-		display: block
-		margin : 0 auto 15px 
-		width  : 100%
-		padding: 0
+		border    : none 
+		display   : block
+		margin    : 0 auto 15px 
+		min-height: initial
+		padding   : 0
+		width     : 100%

@@ -1,6 +1,6 @@
 # WordPress MySQL database migration
 #
-# Generated: Wednesday 5. October 2016 23:11 UTC
+# Generated: Tuesday 11. October 2016 00:16 UTC
 # Hostname: localhost
 # Database: `cueros`
 # --------------------------------------------------------
@@ -181,7 +181,7 @@ CREATE TABLE `wp_options` (
   `autoload` varchar(20) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'yes',
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`)
-) ENGINE=InnoDB AUTO_INCREMENT=306 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=429 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
 #
@@ -292,7 +292,7 @@ INSERT INTO `wp_options` ( `option_id`, `option_name`, `option_value`, `autoload
 (101, 'widget_calendar', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (102, 'widget_tag_cloud', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
 (103, 'widget_nav_menu', 'a:1:{s:12:"_multiwidget";i:1;}', 'yes'),
-(104, 'cron', 'a:5:{i:1475728299;a:3:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1475730619;a:1:{s:36:"check_plugin_updates-wp-media-folder";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1475771803;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1475774837;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
+(104, 'cron', 'a:5:{i:1476160299;a:3:{s:16:"wp_version_check";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:17:"wp_update_plugins";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}s:16:"wp_update_themes";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1476162619;a:1:{s:36:"check_plugin_updates-wp-media-folder";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:10:"twicedaily";s:4:"args";a:0:{}s:8:"interval";i:43200;}}}i:1476203803;a:1:{s:19:"wp_scheduled_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}i:1476206837;a:1:{s:30:"wp_scheduled_auto_draft_delete";a:1:{s:32:"40cd750bba9870f18aada2478b24840a";a:3:{s:8:"schedule";s:5:"daily";s:4:"args";a:0:{}s:8:"interval";i:86400;}}}s:7:"version";i:2;}', 'yes'),
 (137, 'recently_activated', 'a:0:{}', 'yes'),
 (140, 'db_upgraded', '', 'yes'),
 (143, 'can_compress_scripts', '1', 'no'),
@@ -334,7 +334,7 @@ INSERT INTO `wp_options` ( `option_id`, `option_name`, `option_value`, `autoload
 (197, 'wpmf_weight_selected', '[["0-61440","kB"],["61440-122880","kB"],["122880-184320","kB"],["184320-245760","kB"],["245760-307200","kB"]]', 'yes'),
 (198, 'wpmf_color_singlefile', '{"bgdownloadlink":"#444444","hvdownloadlink":"#888888","fontdownloadlink":"#ffffff","hoverfontcolor":"#ffffff"}', 'yes'),
 (199, 'wpmf_option_singlefile', '0', 'yes'),
-(200, 'external_updates-wp-media-folder', 'O:8:"stdClass":3:{s:9:"lastCheck";i:1475704330;s:14:"checkedVersion";s:5:"3.3.3";s:6:"update";O:8:"stdClass":7:{s:2:"id";i:0;s:4:"slug";s:15:"wp-media-folder";s:7:"version";s:5:"3.8.2";s:8:"homepage";s:61:"https://www.joomunited.com/wordpress-products/wp-media-folder";s:12:"download_url";s:120:"https://www.joomunited.com/index.php?option=com_juupdater&task=download.download&extension=wp-media-folder&version=3.8.2";s:14:"upgrade_notice";s:29:"Upgrade to the latest version";s:8:"filename";s:35:"wp-media-folder/wp-media-folder.php";}}', 'no'),
+(200, 'external_updates-wp-media-folder', 'O:8:"stdClass":3:{s:9:"lastCheck";i:1476114453;s:14:"checkedVersion";s:5:"3.3.3";s:6:"update";O:8:"stdClass":7:{s:2:"id";i:0;s:4:"slug";s:15:"wp-media-folder";s:7:"version";s:5:"3.8.2";s:8:"homepage";s:61:"https://www.joomunited.com/wordpress-products/wp-media-folder";s:12:"download_url";s:120:"https://www.joomunited.com/index.php?option=com_juupdater&task=download.download&extension=wp-media-folder&version=3.8.2";s:14:"upgrade_notice";s:29:"Upgrade to the latest version";s:8:"filename";s:35:"wp-media-folder/wp-media-folder.php";}}', 'no'),
 (201, '_wpmf_import_notice_flag', 'no', 'yes'),
 (204, 'theme_mods_twentysixteen', 'a:1:{s:16:"sidebars_widgets";a:2:{s:4:"time";i:1472750766;s:4:"data";a:2:{s:19:"wp_inactive_widgets";a:0:{}s:9:"sidebar-1";a:6:{i:0;s:8:"search-2";i:1;s:14:"recent-posts-2";i:2;s:17:"recent-comments-2";i:3;s:10:"archives-2";i:4;s:12:"categories-2";i:5;s:6:"meta-2";}}}}', 'yes'),
 (205, 'current_theme', 'Cueros Web Wallpay Website', 'yes'),
@@ -343,8 +343,9 @@ INSERT INTO `wp_options` ( `option_id`, `option_name`, `option_value`, `autoload
 (209, 'nav_menu_options', 'a:2:{i:0;b:0;s:8:"auto_add";a:0:{}}', 'yes'),
 (255, 'producto_category_children', 'a:2:{i:5;a:4:{i:0;i:6;i:1;i:7;i:2;i:8;i:3;i:9;}i:10;a:1:{i:0;i:11;}}', 'yes'),
 (269, 'auto_core_update_notified', 'a:4:{s:4:"type";s:7:"success";s:5:"email";s:21:"jgomez@ingenioart.com";s:7:"version";s:5:"4.6.1";s:9:"timestamp";i:1475681940;}', 'no'),
-(301, 'theme_settings', 'a:14:{s:18:"theme_phone_text_1";s:15:"+(408) 194-7557";s:18:"theme_phone_text_2";s:0:"";s:16:"theme_cel_text_1";s:0:"";s:16:"theme_cel_text_2";s:0:"";s:16:"theme_email_text";s:15:"abc@example.com";s:18:"theme_address_text";s:39:"123 Main Street, Anytown, CA 122456 PER";s:19:"theme_atention_text";s:0:"";s:20:"theme_social_fb_text";s:35:"http://fontawesome.io/icon/youtube/";s:25:"theme_social_twitter_text";s:35:"http://fontawesome.io/icon/youtube/";s:25:"theme_social_youtube_text";s:35:"http://fontawesome.io/icon/youtube/";s:27:"theme_social_instagram_text";s:0:"";s:26:"theme_social_linkedin_text";s:0:"";s:23:"theme_social_gplus_text";s:0:"";s:27:"theme_social_pinterest_text";s:0:"";}', 'yes'),
-(303, 'wpmf-category_children', 'a:0:{}', 'yes') ;
+(301, 'theme_settings', 'a:14:{s:18:"theme_phone_text_1";s:15:"+(408) 194-7557";s:18:"theme_phone_text_2";s:15:"+(408) 194-7557";s:16:"theme_cel_text_1";s:9:"987665544";s:16:"theme_cel_text_2";s:9:"987665545";s:16:"theme_email_text";s:15:"abc@example.com";s:18:"theme_address_text";s:39:"123 Main Street, Anytown, CA 122456 PER";s:19:"theme_atention_text";s:0:"";s:20:"theme_social_fb_text";s:35:"http://fontawesome.io/icon/youtube/";s:25:"theme_social_twitter_text";s:35:"http://fontawesome.io/icon/youtube/";s:25:"theme_social_youtube_text";s:35:"http://fontawesome.io/icon/youtube/";s:27:"theme_social_instagram_text";s:0:"";s:26:"theme_social_linkedin_text";s:0:"";s:23:"theme_social_gplus_text";s:0:"";s:27:"theme_social_pinterest_text";s:0:"";}', 'yes'),
+(332, 'category_children', 'a:0:{}', 'yes'),
+(346, 'wpmf-category_children', 'a:1:{i:3;a:1:{i:0;i:18;}}', 'yes') ;
 
 #
 # End of data contents of table `wp_options`
@@ -371,7 +372,7 @@ CREATE TABLE `wp_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB AUTO_INCREMENT=170 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=214 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
 #
@@ -385,11 +386,11 @@ INSERT INTO `wp_postmeta` ( `meta_id`, `post_id`, `meta_key`, `meta_value`) VALU
 (21, 17, '_edit_last', '1'),
 (22, 17, '_edit_lock', '1472750736:1'),
 (23, 19, '_edit_last', '1'),
-(24, 19, '_edit_lock', '1472750814:1'),
+(24, 19, '_edit_lock', '1476132374:1'),
 (25, 21, '_edit_last', '1'),
-(26, 21, '_edit_lock', '1472750823:1'),
+(26, 21, '_edit_lock', '1475775673:1'),
 (27, 23, '_edit_last', '1'),
-(28, 23, '_edit_lock', '1472750841:1'),
+(28, 23, '_edit_lock', '1475783240:1'),
 (29, 26, '_edit_last', '1'),
 (30, 26, '_edit_lock', '1472750991:1'),
 (40, 29, '_menu_item_type', 'post_type'),
@@ -464,27 +465,21 @@ INSERT INTO `wp_postmeta` ( `meta_id`, `post_id`, `meta_key`, `meta_value`) VALU
 (115, 45, '_thumbnail_id', '44'),
 (116, 45, '_dp_original', '43'),
 (117, 46, '_edit_last', '1'),
-(118, 46, '_edit_lock', '1472766511:1'),
+(118, 46, '_edit_lock', '1476137541:1'),
 (119, 46, 'mb_code_product_text', 'MO 1614'),
 (120, 46, 'mb_price_product_text', 'S/. 109.00'),
 (121, 46, '_thumbnail_id', '44'),
 (122, 46, '_dp_original', '43'),
 (123, 47, '_edit_last', '1'),
 (124, 47, '_edit_lock', '1472769357:1'),
-(125, 48, '_wp_attached_file', '2016/09/baner_superior_cueros_artesania_1.jpg'),
-(126, 48, 'wpmf_size', '148056'),
-(127, 48, 'wpmf_filetype', 'jpg'),
-(128, 48, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:1920;s:6:"height";i:622;s:4:"file";s:45:"2016/09/baner_superior_cueros_artesania_1.jpg";s:5:"sizes";a:6:{s:9:"thumbnail";a:4:{s:4:"file";s:45:"baner_superior_cueros_artesania_1-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:44:"baner_superior_cueros_artesania_1-300x97.jpg";s:5:"width";i:300;s:6:"height";i:97;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:45:"baner_superior_cueros_artesania_1-768x249.jpg";s:5:"width";i:768;s:6:"height";i:249;s:9:"mime-type";s:10:"image/jpeg";}s:5:"large";a:4:{s:4:"file";s:46:"baner_superior_cueros_artesania_1-1024x332.jpg";s:5:"width";i:1024;s:6:"height";i:332;s:9:"mime-type";s:10:"image/jpeg";}s:14:"post-thumbnail";a:4:{s:4:"file";s:45:"baner_superior_cueros_artesania_1-210x210.jpg";s:5:"width";i:210;s:6:"height";i:210;s:9:"mime-type";s:10:"image/jpeg";}s:17:"custom-blog-image";a:4:{s:4:"file";s:45:"baner_superior_cueros_artesania_1-784x254.jpg";s:5:"width";i:784;s:6:"height";i:254;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
-(129, 47, '_thumbnail_id', '48'),
 (130, 49, '_edit_last', '1'),
-(131, 49, '_edit_lock', '1472769523:1') ;
-INSERT INTO `wp_postmeta` ( `meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
-(132, 49, '_thumbnail_id', '48'),
+(131, 49, '_edit_lock', '1476119940:1'),
 (133, 49, '_dp_original', '47'),
 (134, 50, '_edit_last', '1'),
-(135, 50, '_edit_lock', '1472850322:1'),
+(135, 50, '_edit_lock', '1475781007:1'),
 (139, 50, 'mb_image_gallery', '44,44,44'),
-(140, 50, 'mb_image_gallery', '44,44,44'),
+(140, 50, 'mb_image_gallery', '44,44,44') ;
+INSERT INTO `wp_postmeta` ( `meta_id`, `post_id`, `meta_key`, `meta_value`) VALUES
 (141, 52, '_dp_original', '1'),
 (142, 52, '_edit_last', '1'),
 (144, 52, '_edit_lock', '1475688301:1'),
@@ -512,7 +507,49 @@ INSERT INTO `wp_postmeta` ( `meta_id`, `post_id`, `meta_key`, `meta_value`) VALU
 (166, 58, 'wpmf_size', '87592'),
 (167, 58, 'wpmf_filetype', 'jpg'),
 (168, 58, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:480;s:6:"height";i:477;s:4:"file";s:44:"2016/09/nosotros_cueros_artesania_foto_2.jpg";s:5:"sizes";a:4:{s:9:"thumbnail";a:4:{s:4:"file";s:44:"nosotros_cueros_artesania_foto_2-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:44:"nosotros_cueros_artesania_foto_2-300x298.jpg";s:5:"width";i:300;s:6:"height";i:298;s:9:"mime-type";s:10:"image/jpeg";}s:14:"post-thumbnail";a:4:{s:4:"file";s:44:"nosotros_cueros_artesania_foto_2-210x210.jpg";s:5:"width";i:210;s:6:"height";i:210;s:9:"mime-type";s:10:"image/jpeg";}s:17:"custom-blog-image";a:4:{s:4:"file";s:44:"nosotros_cueros_artesania_foto_2-352x350.jpg";s:5:"width";i:352;s:6:"height";i:350;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
-(169, 15, '_wp_page_template', 'default') ;
+(169, 15, '_wp_page_template', 'default'),
+(170, 19, '_wp_page_template', 'page-services.php'),
+(171, 19, 'mb_featured_banner', ''),
+(172, 19, 'mb_image_gallery', ',58,57,56'),
+(173, 21, '_wp_page_template', 'page-gallery.php'),
+(174, 61, '_edit_last', '1'),
+(175, 61, '_edit_lock', '1476125226:1'),
+(176, 61, 'mb_image_gallery', '44,44,44'),
+(177, 61, 'mb_image_gallery', '44,44,44'),
+(178, 61, '_dp_original', '50'),
+(179, 23, '_wp_page_template', 'page-products.php'),
+(180, 46, 'mb_image_gallery', ',62,62,62'),
+(181, 62, '_wp_attached_file', '2016/09/producto_cueros_artesania_personal_001-1.jpg'),
+(182, 62, 'wpmf_size', '50690'),
+(183, 62, 'wpmf_filetype', 'jpg'),
+(184, 62, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:450;s:6:"height";i:600;s:4:"file";s:52:"2016/09/producto_cueros_artesania_personal_001-1.jpg";s:5:"sizes";a:4:{s:9:"thumbnail";a:4:{s:4:"file";s:52:"producto_cueros_artesania_personal_001-1-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:52:"producto_cueros_artesania_personal_001-1-225x300.jpg";s:5:"width";i:225;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";}s:14:"post-thumbnail";a:4:{s:4:"file";s:52:"producto_cueros_artesania_personal_001-1-210x210.jpg";s:5:"width";i:210;s:6:"height";i:210;s:9:"mime-type";s:10:"image/jpeg";}s:17:"custom-blog-image";a:4:{s:4:"file";s:52:"producto_cueros_artesania_personal_001-1-263x350.jpg";s:5:"width";i:263;s:6:"height";i:350;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(185, 47, '_wp_trash_meta_status', 'publish'),
+(186, 47, '_wp_trash_meta_time', '1476120030'),
+(187, 47, '_wp_desired_post_slug', '100-cueros'),
+(188, 63, '_wp_attached_file', '2016/09/slider_home.jpg'),
+(189, 63, 'wpmf_size', '72457'),
+(190, 63, 'wpmf_filetype', 'jpg'),
+(191, 63, '_wp_attachment_metadata', 'a:5:{s:5:"width";i:1920;s:6:"height";i:617;s:4:"file";s:23:"2016/09/slider_home.jpg";s:5:"sizes";a:6:{s:9:"thumbnail";a:4:{s:4:"file";s:23:"slider_home-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:22:"slider_home-300x96.jpg";s:5:"width";i:300;s:6:"height";i:96;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:23:"slider_home-768x247.jpg";s:5:"width";i:768;s:6:"height";i:247;s:9:"mime-type";s:10:"image/jpeg";}s:5:"large";a:4:{s:4:"file";s:24:"slider_home-1024x329.jpg";s:5:"width";i:1024;s:6:"height";i:329;s:9:"mime-type";s:10:"image/jpeg";}s:14:"post-thumbnail";a:4:{s:4:"file";s:23:"slider_home-210x210.jpg";s:5:"width";i:210;s:6:"height";i:210;s:9:"mime-type";s:10:"image/jpeg";}s:17:"custom-blog-image";a:4:{s:4:"file";s:23:"slider_home-784x252.jpg";s:5:"width";i:784;s:6:"height";i:252;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}'),
+(192, 49, '_thumbnail_id', '63'),
+(193, 49, 'mb_image_gallery', ''),
+(194, 64, '_edit_last', '1'),
+(195, 64, '_edit_lock', '1476122781:1'),
+(197, 64, '_thumbnail_id', '63'),
+(198, 64, 'mb_image_gallery', ''),
+(199, 64, '_dp_original', '49'),
+(200, 65, '_edit_last', '1'),
+(201, 65, '_wp_page_template', 'page-videos.php'),
+(202, 65, 'mb_featured_banner', ''),
+(203, 65, 'mb_image_gallery', ''),
+(204, 65, '_edit_lock', '1476132348:1'),
+(205, 67, '_menu_item_type', 'post_type'),
+(206, 67, '_menu_item_menu_item_parent', '31'),
+(207, 67, '_menu_item_object_id', '65'),
+(208, 67, '_menu_item_object', 'page'),
+(209, 67, '_menu_item_target', ''),
+(210, 67, '_menu_item_classes', 'a:1:{i:0;s:0:"";}'),
+(211, 67, '_menu_item_xfn', ''),
+(212, 67, '_menu_item_url', '') ;
 
 #
 # End of data contents of table `wp_postmeta`
@@ -560,7 +597,7 @@ CREATE TABLE `wp_posts` (
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=InnoDB AUTO_INCREMENT=60 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=68 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
 #
@@ -577,29 +614,28 @@ INSERT INTO `wp_posts` ( `ID`, `post_author`, `post_date`, `post_date_gmt`, `pos
 (16, 1, '2016-09-01 17:27:46', '2016-09-01 17:27:46', '', 'Nosotros', '', 'inherit', 'closed', 'closed', '', '15-revision-v1', '', '', '2016-09-01 17:27:46', '2016-09-01 17:27:46', '', 15, 'http://localhost/cueros/2016/09/01/15-revision-v1/', 0, 'revision', '', 0),
 (17, 1, '2016-09-01 17:27:57', '2016-09-01 17:27:57', '', 'Blog', '', 'publish', 'closed', 'closed', '', 'blog', '', '', '2016-09-01 17:27:57', '2016-09-01 17:27:57', '', 0, 'http://localhost/cueros/?page_id=17', 0, 'page', '', 0),
 (18, 1, '2016-09-01 17:27:57', '2016-09-01 17:27:57', '', 'Blog', '', 'inherit', 'closed', 'closed', '', '17-revision-v1', '', '', '2016-09-01 17:27:57', '2016-09-01 17:27:57', '', 17, 'http://localhost/cueros/2016/09/01/17-revision-v1/', 0, 'revision', '', 0),
-(19, 1, '2016-09-01 17:29:14', '2016-09-01 17:29:14', '', 'Servicios', '', 'publish', 'closed', 'closed', '', 'servicios', '', '', '2016-09-01 17:29:14', '2016-09-01 17:29:14', '', 0, 'http://localhost/cueros/?page_id=19', 0, 'page', '', 0),
+(19, 1, '2016-09-01 17:29:14', '2016-09-01 17:29:14', '<strong>MANTENIMIENTO </strong>\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n\r\n&nbsp;\r\n\r\n<strong>REPARACIÓN</strong>\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n\r\n&nbsp;', 'Servicios', '', 'publish', 'closed', 'closed', '', 'servicios', '', '', '2016-10-06 17:15:02', '2016-10-06 17:15:02', '', 0, 'http://localhost/cueros/?page_id=19', 0, 'page', '', 0),
 (20, 1, '2016-09-01 17:29:14', '2016-09-01 17:29:14', '', 'Servicios', '', 'inherit', 'closed', 'closed', '', '19-revision-v1', '', '', '2016-09-01 17:29:14', '2016-09-01 17:29:14', '', 19, 'http://localhost/cueros/2016/09/01/19-revision-v1/', 0, 'revision', '', 0),
-(21, 1, '2016-09-01 17:29:24', '2016-09-01 17:29:24', '', 'Galeria', '', 'publish', 'closed', 'closed', '', 'galeria', '', '', '2016-09-01 17:29:24', '2016-09-01 17:29:24', '', 0, 'http://localhost/cueros/?page_id=21', 0, 'page', '', 0),
+(21, 1, '2016-09-01 17:29:24', '2016-09-01 17:29:24', '', 'Galeria', '', 'publish', 'closed', 'closed', '', 'galeria', '', '', '2016-10-06 17:41:13', '2016-10-06 17:41:13', '', 0, 'http://localhost/cueros/?page_id=21', 0, 'page', '', 0),
 (22, 1, '2016-09-01 17:29:24', '2016-09-01 17:29:24', '', 'Galeria', '', 'inherit', 'closed', 'closed', '', '21-revision-v1', '', '', '2016-09-01 17:29:24', '2016-09-01 17:29:24', '', 21, 'http://localhost/cueros/2016/09/01/21-revision-v1/', 0, 'revision', '', 0),
-(23, 1, '2016-09-01 17:29:33', '2016-09-01 17:29:33', '', 'Productos', '', 'publish', 'closed', 'closed', '', 'producto', '', '', '2016-09-01 17:29:41', '2016-09-01 17:29:41', '', 0, 'http://localhost/cueros/?page_id=23', 0, 'page', '', 0),
+(23, 1, '2016-09-01 17:29:33', '2016-09-01 17:29:33', '', 'Productos', '', 'publish', 'closed', 'closed', '', 'producto', '', '', '2016-10-06 19:47:19', '2016-10-06 19:47:19', '', 0, 'http://localhost/cueros/?page_id=23', 0, 'page', '', 0),
 (24, 1, '2016-09-01 17:29:33', '2016-09-01 17:29:33', '', 'Producto', '', 'inherit', 'closed', 'closed', '', '23-revision-v1', '', '', '2016-09-01 17:29:33', '2016-09-01 17:29:33', '', 23, 'http://localhost/cueros/2016/09/01/23-revision-v1/', 0, 'revision', '', 0),
 (25, 1, '2016-09-01 17:29:41', '2016-09-01 17:29:41', '', 'Productos', '', 'inherit', 'closed', 'closed', '', '23-revision-v1', '', '', '2016-09-01 17:29:41', '2016-09-01 17:29:41', '', 23, 'http://localhost/cueros/2016/09/01/23-revision-v1/', 0, 'revision', '', 0),
 (26, 1, '2016-09-01 17:29:50', '2016-09-01 17:29:50', '', 'Contacto', '', 'publish', 'closed', 'closed', '', 'contacto', '', '', '2016-09-01 17:29:50', '2016-09-01 17:29:50', '', 0, 'http://localhost/cueros/?page_id=26', 0, 'page', '', 0),
 (27, 1, '2016-09-01 17:29:50', '2016-09-01 17:29:50', '', 'Contacto', '', 'inherit', 'closed', 'closed', '', '26-revision-v1', '', '', '2016-09-01 17:29:50', '2016-09-01 17:29:50', '', 26, 'http://localhost/cueros/2016/09/01/26-revision-v1/', 0, 'revision', '', 0),
-(29, 1, '2016-09-01 18:16:44', '2016-09-01 18:16:44', ' ', '', '', 'publish', 'closed', 'closed', '', '29', '', '', '2016-09-01 18:17:25', '2016-09-01 18:17:25', '', 0, 'http://localhost/cueros/?p=29', 3, 'nav_menu_item', '', 0),
-(30, 1, '2016-09-01 18:16:45', '2016-09-01 18:16:45', ' ', '', '', 'publish', 'closed', 'closed', '', '30', '', '', '2016-09-01 18:17:25', '2016-09-01 18:17:25', '', 0, 'http://localhost/cueros/?p=30', 7, 'nav_menu_item', '', 0),
-(31, 1, '2016-09-01 18:16:45', '2016-09-01 18:16:45', ' ', '', '', 'publish', 'closed', 'closed', '', '31', '', '', '2016-09-01 18:17:25', '2016-09-01 18:17:25', '', 0, 'http://localhost/cueros/?p=31', 5, 'nav_menu_item', '', 0),
-(32, 1, '2016-09-01 18:16:45', '2016-09-01 18:16:45', ' ', '', '', 'publish', 'closed', 'closed', '', '32', '', '', '2016-09-01 18:17:25', '2016-09-01 18:17:25', '', 0, 'http://localhost/cueros/?p=32', 1, 'nav_menu_item', '', 0),
-(33, 1, '2016-09-01 18:16:46', '2016-09-01 18:16:46', ' ', '', '', 'publish', 'closed', 'closed', '', '33', '', '', '2016-09-01 18:17:25', '2016-09-01 18:17:25', '', 0, 'http://localhost/cueros/?p=33', 2, 'nav_menu_item', '', 0),
-(34, 1, '2016-09-01 18:16:46', '2016-09-01 18:16:46', ' ', '', '', 'publish', 'closed', 'closed', '', '34', '', '', '2016-09-01 18:17:25', '2016-09-01 18:17:25', '', 0, 'http://localhost/cueros/?p=34', 6, 'nav_menu_item', '', 0),
-(35, 1, '2016-09-01 18:16:46', '2016-09-01 18:16:46', ' ', '', '', 'publish', 'closed', 'closed', '', '35', '', '', '2016-09-01 18:17:25', '2016-09-01 18:17:25', '', 0, 'http://localhost/cueros/?p=35', 4, 'nav_menu_item', '', 0),
+(29, 1, '2016-09-01 18:16:44', '2016-09-01 18:16:44', ' ', '', '', 'publish', 'closed', 'closed', '', '29', '', '', '2016-10-10 20:49:12', '2016-10-10 20:49:12', '', 0, 'http://localhost/cueros/?p=29', 3, 'nav_menu_item', '', 0),
+(30, 1, '2016-09-01 18:16:45', '2016-09-01 18:16:45', ' ', '', '', 'publish', 'closed', 'closed', '', '30', '', '', '2016-10-10 20:49:13', '2016-10-10 20:49:13', '', 0, 'http://localhost/cueros/?p=30', 8, 'nav_menu_item', '', 0),
+(31, 1, '2016-09-01 18:16:45', '2016-09-01 18:16:45', ' ', '', '', 'publish', 'closed', 'closed', '', '31', '', '', '2016-10-10 20:49:12', '2016-10-10 20:49:12', '', 0, 'http://localhost/cueros/?p=31', 5, 'nav_menu_item', '', 0),
+(32, 1, '2016-09-01 18:16:45', '2016-09-01 18:16:45', ' ', '', '', 'publish', 'closed', 'closed', '', '32', '', '', '2016-10-10 20:49:12', '2016-10-10 20:49:12', '', 0, 'http://localhost/cueros/?p=32', 1, 'nav_menu_item', '', 0),
+(33, 1, '2016-09-01 18:16:46', '2016-09-01 18:16:46', ' ', '', '', 'publish', 'closed', 'closed', '', '33', '', '', '2016-10-10 20:49:12', '2016-10-10 20:49:12', '', 0, 'http://localhost/cueros/?p=33', 2, 'nav_menu_item', '', 0),
+(34, 1, '2016-09-01 18:16:46', '2016-09-01 18:16:46', ' ', '', '', 'publish', 'closed', 'closed', '', '34', '', '', '2016-10-10 20:49:12', '2016-10-10 20:49:12', '', 0, 'http://localhost/cueros/?p=34', 7, 'nav_menu_item', '', 0),
+(35, 1, '2016-09-01 18:16:46', '2016-09-01 18:16:46', ' ', '', '', 'publish', 'closed', 'closed', '', '35', '', '', '2016-10-10 20:49:12', '2016-10-10 20:49:12', '', 0, 'http://localhost/cueros/?p=35', 4, 'nav_menu_item', '', 0),
 (43, 1, '2016-09-01 21:25:51', '2016-09-01 21:25:51', '', 'Monedero', '', 'publish', 'closed', 'closed', '', 'monedero', '', '', '2016-09-01 21:38:50', '2016-09-01 21:38:50', '', 0, 'http://localhost/cueros/?post_type=theme-producto&#038;p=43', 0, 'theme-producto', '', 0),
 (44, 1, '2016-09-01 21:38:43', '2016-09-01 21:38:43', '', 'producto_cueros_artesania_personal_001', '', 'inherit', 'open', 'closed', '', 'producto_cueros_artesania_personal_001', '', '', '2016-09-01 21:38:43', '2016-09-01 21:38:43', '', 43, 'http://localhost/cueros/wp-content/uploads/2016/09/producto_cueros_artesania_personal_001.jpg', 0, 'attachment', 'image/jpeg', 0),
 (45, 1, '2016-09-01 21:48:18', '2016-09-01 21:48:18', '', 'Monedero', '', 'publish', 'closed', 'closed', '', 'monedero-3', '', '', '2016-09-01 21:48:36', '2016-09-01 21:48:36', '', 0, 'http://localhost/cueros/?post_type=theme-producto&#038;p=45', 0, 'theme-producto', '', 0),
-(46, 1, '2016-09-01 21:48:25', '2016-09-01 21:48:25', '', 'Monedero', '', 'publish', 'closed', 'closed', '', 'monedero-2', '', '', '2016-09-01 21:48:31', '2016-09-01 21:48:31', '', 0, 'http://localhost/cueros/?post_type=theme-producto&#038;p=46', 0, 'theme-producto', '', 0),
-(47, 1, '2016-09-01 22:37:12', '2016-09-01 22:37:12', 'accesorios originales', '100% cueros', '', 'publish', 'closed', 'closed', '', '100-cueros', '', '', '2016-09-01 22:37:12', '2016-09-01 22:37:12', '', 0, 'http://localhost/cueros/?post_type=slider-home&#038;p=47', 0, 'slider-home', '', 0),
-(48, 1, '2016-09-01 22:36:50', '2016-09-01 22:36:50', '', 'baner_superior_cueros_artesania_1', '', 'inherit', 'open', 'closed', '', 'baner_superior_cueros_artesania_1', '', '', '2016-09-01 22:36:50', '2016-09-01 22:36:50', '', 47, 'http://localhost/cueros/wp-content/uploads/2016/09/baner_superior_cueros_artesania_1.jpg', 0, 'attachment', 'image/jpeg', 0),
-(49, 1, '2016-09-01 22:38:27', '2016-09-01 22:38:27', 'accesorios originales', '100% cueros', '', 'publish', 'closed', 'closed', '', '100-cueros-2', '', '', '2016-09-01 22:38:43', '2016-09-01 22:38:43', '', 0, 'http://localhost/cueros/?post_type=slider-home&#038;p=49', 0, 'slider-home', '', 0),
+(46, 1, '2016-09-01 21:48:25', '2016-09-01 21:48:25', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\ntempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\nquis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\nproident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Monedero', '', 'publish', 'closed', 'closed', '', 'monedero-2', '', '', '2016-10-06 20:51:53', '2016-10-06 20:51:53', '', 0, 'http://localhost/cueros/?post_type=theme-producto&#038;p=46', 0, 'theme-producto', '', 0),
+(47, 1, '2016-09-01 22:37:12', '2016-09-01 22:37:12', 'accesorios originales', '100% cueros', '', 'trash', 'closed', 'closed', '', '100-cueros__trashed', '', '', '2016-10-10 17:20:30', '2016-10-10 17:20:30', '', 0, 'http://localhost/cueros/?post_type=slider-home&#038;p=47', 0, 'slider-home', '', 0),
+(49, 1, '2016-09-01 22:38:27', '2016-09-01 22:38:27', 'accesorios originales', '100% cueros', '', 'publish', 'closed', 'closed', '', '100-cueros-2', '', '', '2016-10-10 17:21:05', '2016-10-10 17:21:05', '', 0, 'http://localhost/cueros/?post_type=slider-home&#038;p=49', 0, 'slider-home', '', 0),
 (50, 1, '2016-09-02 19:24:49', '2016-09-02 19:24:49', '', 'Artesanía Tarma', '', 'publish', 'closed', 'closed', '', 'artesania-tarma', '', '', '2016-09-02 21:03:04', '2016-09-02 21:03:04', '', 0, 'http://localhost/cueros/?post_type=theme-gallery-images&#038;p=50', 0, 'theme-gallery-images', '', 0),
 (51, 1, '2016-10-05 16:14:15', '0000-00-00 00:00:00', '', 'Borrador automático', '', 'auto-draft', 'open', 'open', '', '', '', '', '2016-10-05 16:14:15', '0000-00-00 00:00:00', '', 0, 'http://localhost/cueros/?p=51', 0, 'post', '', 0),
 (52, 1, '2016-10-05 17:24:04', '2016-10-05 17:24:04', 'Bienvenido a WordPress. Esta es su primera entrada. Edítela o bórrela, y ¡empiece a escribir!', '¡Hola mundo!', '', 'publish', 'open', 'open', '', 'hola-mundo-2', '', '', '2016-10-05 17:25:00', '2016-10-05 17:25:00', '', 0, 'http://localhost/cueros/?p=52', 0, 'post', '', 0),
@@ -609,7 +645,15 @@ INSERT INTO `wp_posts` ( `ID`, `post_author`, `post_date`, `post_date_gmt`, `pos
 (56, 1, '2016-10-05 19:55:29', '2016-10-05 19:55:29', '', 'banner_sample', '', 'inherit', 'open', 'closed', '', 'banner_sample', '', '', '2016-10-05 19:55:29', '2016-10-05 19:55:29', '', 15, 'http://localhost/cueros/wp-content/uploads/2016/09/banner_sample.jpg', 0, 'attachment', 'image/jpeg', 0),
 (57, 1, '2016-10-05 20:18:37', '2016-10-05 20:18:37', '', 'nosotros_cueros_artesania_foto_3', '', 'inherit', 'open', 'closed', '', 'nosotros_cueros_artesania_foto_3', '', '', '2016-10-05 20:18:37', '2016-10-05 20:18:37', '', 15, 'http://localhost/cueros/wp-content/uploads/2016/09/nosotros_cueros_artesania_foto_3.jpg', 0, 'attachment', 'image/jpeg', 0),
 (58, 1, '2016-10-05 20:18:39', '2016-10-05 20:18:39', '', 'nosotros_cueros_artesania_foto_2', '', 'inherit', 'open', 'closed', '', 'nosotros_cueros_artesania_foto_2', '', '', '2016-10-05 20:18:39', '2016-10-05 20:18:39', '', 15, 'http://localhost/cueros/wp-content/uploads/2016/09/nosotros_cueros_artesania_foto_2.jpg', 0, 'attachment', 'image/jpeg', 0),
-(59, 1, '2016-10-05 20:39:56', '2016-10-05 20:39:56', 'Fundada en 1973 por Marina Bustamante, Renzo Costa ha logrado posicionarse como\r\nuna de las firmas mas importantes de diseño de prendas y artículos de cuero.\r\n\r\nActualmente cuenta con más de 40 puntos de venta en los centros comerciales más importántes\r\ndel Perú tales como el Jockey Plata, Larcomar y la cadena Real Plaza; así como puntos\r\nindependientes o stand alone en zonas estratégicas de Lima. Más recientemente, Renzo Costa\r\nha ingresado con éxito al mercado Chileno emplazándose en reconocidas zonas comerciales.', 'Nosotros', '', 'inherit', 'closed', 'closed', '', '15-revision-v1', '', '', '2016-10-05 20:39:56', '2016-10-05 20:39:56', '', 15, 'http://localhost/cueros/2016/10/05/15-revision-v1/', 0, 'revision', '', 0) ;
+(59, 1, '2016-10-05 20:39:56', '2016-10-05 20:39:56', 'Fundada en 1973 por Marina Bustamante, Renzo Costa ha logrado posicionarse como\r\nuna de las firmas mas importantes de diseño de prendas y artículos de cuero.\r\n\r\nActualmente cuenta con más de 40 puntos de venta en los centros comerciales más importántes\r\ndel Perú tales como el Jockey Plata, Larcomar y la cadena Real Plaza; así como puntos\r\nindependientes o stand alone en zonas estratégicas de Lima. Más recientemente, Renzo Costa\r\nha ingresado con éxito al mercado Chileno emplazándose en reconocidas zonas comerciales.', 'Nosotros', '', 'inherit', 'closed', 'closed', '', '15-revision-v1', '', '', '2016-10-05 20:39:56', '2016-10-05 20:39:56', '', 15, 'http://localhost/cueros/2016/10/05/15-revision-v1/', 0, 'revision', '', 0),
+(60, 1, '2016-10-06 17:14:44', '2016-10-06 17:14:44', '<strong>MANTENIMIENTO </strong>\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n\r\n&nbsp;\r\n\r\n<strong>REPARACIÓN</strong>\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\nconsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\ncillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat nonproident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n\r\n&nbsp;', 'Servicios', '', 'inherit', 'closed', 'closed', '', '19-revision-v1', '', '', '2016-10-06 17:14:44', '2016-10-06 17:14:44', '', 19, 'http://localhost/cueros/2016/10/06/19-revision-v1/', 0, 'revision', '', 0),
+(61, 1, '2016-10-06 19:12:59', '2016-10-06 19:12:59', 'otra galería mas para la colección', 'Artesanía Otra', '', 'publish', 'closed', 'closed', '', 'artesania-otra', '', '', '2016-10-06 19:12:59', '2016-10-06 19:12:59', '', 0, 'http://localhost/cueros/?post_type=theme-gallery-images&#038;p=61', 0, 'theme-gallery-images', '', 0),
+(62, 1, '2016-10-06 20:51:40', '2016-10-06 20:51:40', '', 'producto_cueros_artesania_personal_001', '', 'inherit', 'open', 'closed', '', 'producto_cueros_artesania_personal_001-2', '', '', '2016-10-06 20:51:40', '2016-10-06 20:51:40', '', 46, 'http://localhost/cueros/wp-content/uploads/2016/09/producto_cueros_artesania_personal_001-1.jpg', 0, 'attachment', 'image/jpeg', 0),
+(63, 1, '2016-10-10 17:20:59', '2016-10-10 17:20:59', '', 'slider_home', '', 'inherit', 'open', 'closed', '', 'slider_home', '', '', '2016-10-10 17:20:59', '2016-10-10 17:20:59', '', 49, 'http://localhost/cueros/wp-content/uploads/2016/09/slider_home.jpg', 0, 'attachment', 'image/jpeg', 0),
+(64, 1, '2016-10-10 17:21:28', '2016-10-10 17:21:28', 'accesorios originales', '100% cueros', '', 'publish', 'closed', 'closed', '', '100-cueros', '', '', '2016-10-10 17:21:34', '2016-10-10 17:21:34', '', 0, 'http://localhost/cueros/?post_type=slider-home&#038;p=64', 0, 'slider-home', '', 0),
+(65, 1, '2016-10-10 20:48:09', '2016-10-10 20:48:09', '', 'Videos', '', 'publish', 'closed', 'closed', '', 'videos', '', '', '2016-10-10 20:48:09', '2016-10-10 20:48:09', '', 0, 'http://localhost/cueros/?page_id=65', 0, 'page', '', 0),
+(66, 1, '2016-10-10 20:48:09', '2016-10-10 20:48:09', '', 'Videos', '', 'inherit', 'closed', 'closed', '', '65-revision-v1', '', '', '2016-10-10 20:48:09', '2016-10-10 20:48:09', '', 65, 'http://localhost/cueros/2016/10/10/65-revision-v1/', 0, 'revision', '', 0),
+(67, 1, '2016-10-10 20:49:12', '2016-10-10 20:49:12', ' ', '', '', 'publish', 'closed', 'closed', '', '67', '', '', '2016-10-10 20:49:12', '2016-10-10 20:49:12', '', 0, 'http://localhost/cueros/?p=67', 6, 'nav_menu_item', '', 0) ;
 
 #
 # End of data contents of table `wp_posts`
@@ -650,11 +694,20 @@ INSERT INTO `wp_term_relationships` ( `object_id`, `term_taxonomy_id`, `term_ord
 (34, 2, 0),
 (35, 2, 0),
 (44, 3, 0),
-(48, 4, 0),
+(46, 5, 0),
+(46, 7, 0),
+(46, 10, 0),
+(46, 11, 0),
+(46, 15, 0),
+(46, 16, 0),
+(46, 17, 0),
 (52, 1, 0),
 (56, 12, 0),
 (57, 12, 0),
-(58, 12, 0) ;
+(58, 12, 0),
+(62, 18, 0),
+(63, 4, 0),
+(67, 2, 0) ;
 
 #
 # End of data contents of table `wp_term_relationships`
@@ -683,7 +736,7 @@ CREATE TABLE `wp_term_taxonomy` (
   PRIMARY KEY (`term_taxonomy_id`),
   UNIQUE KEY `term_id_taxonomy` (`term_id`,`taxonomy`),
   KEY `taxonomy` (`taxonomy`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
 #
@@ -691,17 +744,23 @@ CREATE TABLE `wp_term_taxonomy` (
 #
 INSERT INTO `wp_term_taxonomy` ( `term_taxonomy_id`, `term_id`, `taxonomy`, `description`, `parent`, `count`) VALUES
 (1, 1, 'category', '', 0, 2),
-(2, 2, 'nav_menu', '', 0, 7),
+(2, 2, 'nav_menu', '', 0, 8),
 (3, 3, 'wpmf-category', '', 0, 1),
-(4, 4, 'wpmf-category', '', 0, 0),
-(5, 5, 'producto_category', '', 0, 0),
+(4, 4, 'wpmf-category', '', 0, 1),
+(5, 5, 'producto_category', '', 0, 1),
 (6, 6, 'producto_category', '', 5, 0),
-(7, 7, 'producto_category', '', 5, 0),
+(7, 7, 'producto_category', '', 5, 1),
 (8, 8, 'producto_category', '', 5, 0),
 (9, 9, 'producto_category', '', 5, 0),
-(10, 10, 'producto_category', '', 0, 0),
-(11, 11, 'producto_category', '', 10, 0),
-(12, 12, 'wpmf-category', '', 0, 3) ;
+(10, 10, 'producto_category', '', 0, 1),
+(11, 11, 'producto_category', '', 10, 1),
+(12, 12, 'wpmf-category', '', 0, 3),
+(13, 13, 'category', '', 0, 0),
+(14, 14, 'category', '', 0, 0),
+(15, 15, 'post_tag', '', 0, 1),
+(16, 16, 'post_tag', '', 0, 1),
+(17, 17, 'post_tag', '', 0, 1),
+(18, 18, 'wpmf-category', '', 3, 1) ;
 
 #
 # End of data contents of table `wp_term_taxonomy`
@@ -728,7 +787,7 @@ CREATE TABLE `wp_termmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `term_id` (`term_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
 #
@@ -736,7 +795,9 @@ CREATE TABLE `wp_termmeta` (
 #
 INSERT INTO `wp_termmeta` ( `meta_id`, `term_id`, `meta_key`, `meta_value`) VALUES
 (1, 10, 'meta_tax_order', '2'),
-(2, 5, 'meta_tax_order', '1') ;
+(2, 5, 'meta_tax_order', '1'),
+(3, 13, 'meta_tax_order', '1'),
+(4, 14, 'meta_tax_order', '1') ;
 
 #
 # End of data contents of table `wp_termmeta`
@@ -763,7 +824,7 @@ CREATE TABLE `wp_terms` (
   PRIMARY KEY (`term_id`),
   KEY `slug` (`slug`(191)),
   KEY `name` (`name`(191))
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
 #
@@ -781,7 +842,13 @@ INSERT INTO `wp_terms` ( `term_id`, `name`, `slug`, `term_group`) VALUES
 (9, 'Calzados', 'calzados', 0),
 (10, 'Artesania', 'artesania', 0),
 (11, 'Bordado', 'bordado', 0),
-(12, 'NOSOTROS', 'nosotros', 1) ;
+(12, 'NOSOTROS', 'nosotros', 1),
+(13, 'Calzados', 'calzados', 0),
+(14, 'Art. Personal', 'art-personal', 0),
+(15, 'ropa', 'ropa', 0),
+(16, 'cueros', 'cueros', 0),
+(17, 'comida', 'comida', 0),
+(18, 'CASACA', 'casas', 1) ;
 
 #
 # End of data contents of table `wp_terms`
@@ -808,7 +875,7 @@ CREATE TABLE `wp_usermeta` (
   PRIMARY KEY (`umeta_id`),
   KEY `user_id` (`user_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 
 #
@@ -828,16 +895,17 @@ INSERT INTO `wp_usermeta` ( `umeta_id`, `user_id`, `meta_key`, `meta_value`) VAL
 (11, 1, 'wp_user_level', '10'),
 (12, 1, 'dismissed_wp_pointers', ''),
 (13, 1, 'show_welcome_panel', '1'),
-(14, 1, 'session_tokens', 'a:3:{s:64:"d990ea5deab11d5cabfbe3aa78305ba3b692fb82f2673fac84c4e151c143139d";a:4:{s:10:"expiration";i:1475856852;s:2:"ip";s:3:"::1";s:2:"ua";s:102:"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36";s:5:"login";i:1475684052;}s:64:"756fb0f9ed76adffb7a93bc7122e50ebe54a6d212ea0998d5040575c34c0c1ce";a:4:{s:10:"expiration";i:1475872166;s:2:"ip";s:3:"::1";s:2:"ua";s:102:"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36";s:5:"login";i:1475699366;}s:64:"fe150f33d55e20e8c57b26cd855a45ff35df08a743523d13f8c54a62225a98c9";a:4:{s:10:"expiration";i:1475876977;s:2:"ip";s:3:"::1";s:2:"ua";s:102:"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36";s:5:"login";i:1475704177;}}'),
+(14, 1, 'session_tokens', 'a:4:{s:64:"519f814d504e1e24695b698e63cf0b1d235d51f8513b0ddfca10e445ac250835";a:4:{s:10:"expiration";i:1476287252;s:2:"ip";s:3:"::1";s:2:"ua";s:115:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36";s:5:"login";i:1476114452;}s:64:"05946d7c0034dd6716705a0b7f21ee06ce814df9085fd0ca73af4a12d7060300";a:4:{s:10:"expiration";i:1476288723;s:2:"ip";s:3:"::1";s:2:"ua";s:115:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36";s:5:"login";i:1476115923;}s:64:"2a09a6c10079e900472a22558ba0e7d8064e435a18a18f9e219d55a8ea105701";a:4:{s:10:"expiration";i:1476304791;s:2:"ip";s:3:"::1";s:2:"ua";s:115:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36";s:5:"login";i:1476131991;}s:64:"96dd3b1936e0ecec8fbd1e2bb303bda230131a9dab4d433736a3f51c4f1c4961";a:4:{s:10:"expiration";i:1476317244;s:2:"ip";s:3:"::1";s:2:"ua";s:115:"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36";s:5:"login";i:1476144444;}}'),
 (15, 1, 'wp_dashboard_quick_press_last_post_id', '51'),
 (16, 1, 'managenav-menuscolumnshidden', 'a:5:{i:0;s:11:"link-target";i:1;s:11:"css-classes";i:2;s:3:"xfn";i:3;s:11:"description";i:4;s:15:"title-attribute";}'),
 (17, 1, 'metaboxhidden_nav-menus', 'a:1:{i:0;s:12:"add-post_tag";}'),
 (18, 1, 'closedpostboxes_theme-producto', 'a:1:{i:0;s:10:"postcustom";}'),
 (19, 1, 'metaboxhidden_theme-producto', 'a:1:{i:0;s:7:"slugdiv";}'),
-(20, 1, 'wp_user-settings', 'libraryContent=browse&editor=tinymce'),
-(21, 1, 'wp_user-settings-time', '1475688811'),
+(20, 1, 'wp_user-settings', 'libraryContent=browse&editor=tinymce&hidetb=1'),
+(21, 1, 'wp_user-settings-time', '1475774080'),
 (22, 1, 'closedpostboxes_theme-gallery-images', 'a:2:{i:0;s:11:"postexcerpt";i:1;s:10:"postcustom";}'),
-(23, 1, 'metaboxhidden_theme-gallery-images', 'a:1:{i:0;s:7:"slugdiv";}') ;
+(23, 1, 'metaboxhidden_theme-gallery-images', 'a:1:{i:0;s:7:"slugdiv";}'),
+(24, 1, 'nav_menu_recently_edited', '2') ;
 
 #
 # End of data contents of table `wp_usermeta`

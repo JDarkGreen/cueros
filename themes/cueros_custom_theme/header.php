@@ -13,7 +13,7 @@
 
 	<meta name="description" content="<?php bloginfo('description'); ?>">
 
-	<meta name="author" content="">
+	<meta name="author" content="" />
 
 	<!-- Mobile Specific Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -27,8 +27,10 @@
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-
+	
 	<!-- Favicon and Apple Icons -->
+	<link rel="shortcut icon" href="<?= IMAGES ?>/favicon.ico" type="image/x-icon" />
+	<link rel="icon" href="<?= IMAGES ?>/favicon.ico" type="image/x-icon" />
 	
 	<?php wp_head(); ?>
 </head>
@@ -74,6 +76,29 @@
 	</div> <!-- /.pageWrapperLayout -->
 
 </header> <!-- /.mainHeader  -->
+
+
+<!-- Contenedor Versión Mobile -->
+<header class="mainHeader hidden-sm-up containerFlex containerAlignContent" canvas="">
+
+	<!-- Icono abrir menu lateral -->
+	<div class="icon-header">
+		<i class="js-toggle-mobile-nav fa fa-bars" data-id="id-container-menu" aria-hidden="true"></i>
+	</div><!-- /.icon-header -->
+
+	<!-- Logo -->
+	<h1 class="logo">
+		<a href="<?= site_url(); ?>" class="center-block">
+			<img src="<?= $logo_theme; ?>" alt="portada-cueros-web" class="img-fluid m-x-auto" />
+		</a>
+	</h1> <!-- /.logo -->
+
+	<!-- Icono abrir menu lateral derecha -->
+	<div class="icon-header">
+		<i class="js-toggle-mobile-nav fa fa-bars" data-id="id-container-post" aria-hidden="true"></i>
+	</div><!-- /.icon-header -->	
+
+</header> <!-- /.mainHeader -->
 
 
 

@@ -34,7 +34,7 @@ $options = get_option( 'theme_settings' );
 					<div class="content-item">
 
 						<!-- Título -->
-						<h3 class="title-footer text-uppercase"> <?= __('datos:',LANG); ?> </h3>
+						<h3 class="title-footer text-uppercase text-xs-center text-sm-left"> <?= __('datos:',LANG); ?> </h3>
 
 						<!-- Menú de Datos -->
 						<ul id="mainFooter__list-data">
@@ -83,7 +83,7 @@ $options = get_option( 'theme_settings' );
 					<div class="content-item">
 
 						<!-- Título -->
-						<h3 class="title-footer text-uppercase"> <?= __('redes sociales:',LANG); ?> </h3>
+						<h3 class="title-footer text-uppercase text-xs-center text-sm-left"> <?= __('redes sociales:',LANG); ?> </h3>
 				
 					<?php  
 						/**
@@ -119,7 +119,7 @@ $options = get_option( 'theme_settings' );
     
 			timeToHide: 1200, //Time in milliseconds for fakeLoader disappear
 			zIndex    : 9999, // Default zIndex
-			spinner   : "spinner1",//Options: 'spinner1', 'spinner2', 'spinner3', 'spinner4', 'spinner5', 'spinner6', 'spinner7' 
+			spinner   : "spinner7",//Options: 'spinner1', 'spinner2', 'spinner3', 'spinner4', 'spinner5', 'spinner6', 'spinner7' 
 			bgColor   : "#A70008", //Hex, RGB or RGBA colors
    		});
     </script>
