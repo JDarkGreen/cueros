@@ -1,10 +1,16 @@
-<?php /*Template Name: Página Producto - Plantilla */ ?>
-<?php  
+<?php 
+/*
+ * Template For Taxonomy : theme-producto
+ * Plantilla para Taxonomía : 
+ */
 
-/**
-  * Objecto Actual
-  */
-global $post;
+/*
+ * Objecto Actual
+ */
+$current_term = get_queried_object();
+
+//Taxonomía Actual
+$the_taxonomy = $current_term->taxonomy;
 
 /*
  * Mostrar Header
@@ -19,8 +25,8 @@ $options = get_option("theme_settings");
 /*
  * Variable para Template banner de página
  */
-$banner = $post;
-
+$page_products = get_page_by_title('productos');
+$banner        = $page_products;
 include(locate_template('partials/banner-top-page.php'));
 
 /*
@@ -39,17 +45,26 @@ $args = array(
 	'post_status'    => 'publish',
 	'post_type'      => 'theme-producto',
 	'posts_per_page' => $posts_per_page,
+	'tax_query' => array(
+		array(
+			'taxonomy' => $the_taxonomy,
+			'field'    => 'slug',
+			'terms'    => $current_term->slug,
+		),
+	),
 );
 
-$the_query = new WP_Query( $args );
-
-?>
+$the_query = new WP_Query( $args ); ?>
 
 <!-- Wrapper de Contenido  -->
 <div class="pageWrapperLayout">
 
 	<!-- Contenedor Página : Nosotros -->
 	<div id="pageProducts">
+
+		<!-- Título -->
+		<h2 class="titleCommon__section text-uppercase">
+		<?= __( $current_term->name , LANG ); ?> </h2>
 
 		<div class="row">
 
@@ -121,6 +136,17 @@ $the_query = new WP_Query( $args );
 					</a>
 					
 				</section> <!-- /.sectionPagination -->
+
+				<?php else: ?>
+
+					<div class="alert alert-danger alert-dismissible fade in" role="alert">
+					  
+					  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					    <span aria-hidden="true">&times;</span>
+					  </button>
+
+					  <strong>Ops!</strong> Por el momento este contenido se encuentra en mantenimiento. Puede visitar nuestras otras secciones. Gracias
+					</div>
 
 				<?php endif; wp_reset_postdata(); ?>
 

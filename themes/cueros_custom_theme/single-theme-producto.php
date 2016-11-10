@@ -21,9 +21,7 @@ $options = get_option("theme_settings");
  */
 $banner = get_page_by_title('productos');
 
-include(locate_template('partials/banner-top-page.php'));
-
-?>
+include(locate_template('partials/banner-top-page.php')); ?>
 
 <!-- Wrapper de Contenido  -->
 <div class="pageWrapperLayout">
@@ -33,28 +31,8 @@ include(locate_template('partials/banner-top-page.php'));
 
 		<div class="row">
 
-			<!--  Sidebar -->
-			<div class="col-xs-12 col-sm-4">
-
-				<?php  
-			      /*
-			       * Incluir template de categorias
-			       */
-				include_once(locate_template("partials/sidebar/categories-product.php"));
-
-				echo '<br><br>';
-
-				 /*
-				  * Incluir template de fan page facebook
-				  */
-				$facebook_link = "https://www.facebook.com/Ingenioartweb/";
-				include_once(locate_template("partials/sidebar/section-facebook.php"));
-				?>
-
-			</div> <!-- /.col-xs-12 col-sm-4 -->
-
 			<!-- Contenido -->
-			<div class="col-xs-12 col-sm-8">
+			<div class="col-xs-12 col-sm-9">
 
 				<!-- Main Article Product -->
 				<main class="itemSingleProduct">
@@ -196,7 +174,27 @@ include(locate_template('partials/banner-top-page.php'));
 					include(locate_template('partials/products/carousel-featured-products.php'));
 				?>
 
-			</div> <!-- /.col-xs-12 col-sm-8 -->
+			</div> <!-- /.col-xs-12 col-sm-9 -->
+
+			<!--  Sidebar -->
+			<div class="col-xs-12 col-sm-3">
+
+				<?php  
+			      /*
+			       * Incluir template de categorias
+			       */
+				include_once(locate_template("partials/sidebar/categories-product.php"));
+
+				echo '<br><br>';
+
+				 /*
+				  * Incluir template de fan page facebook
+				  */
+				$facebook_link = "https://www.facebook.com/Ingenioartweb/";
+				include_once(locate_template("partials/sidebar/section-facebook.php"));
+				?>
+
+			</div> <!-- /.col-xs-12 col-sm-3 -->
 
 		</div> <!-- /.row -->
 		
